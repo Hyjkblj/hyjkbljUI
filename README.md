@@ -89,27 +89,136 @@ Hycomponents/
 
 ---
 
-## 组件清单
+## 组件文档索引
 
-| 组件 | 位置 | 框架 | 状态 | 依赖 | 一句话说明 |
-| --- | --- | --- | --- | --- | --- |
-| MacbookScroll 笔记本滚动 | `registry/macbook-scroll` | React | experimental | motion, @tabler/icons-react | 滚动驱动的开盖动效 |
-| CanvasText 画布扫线文字 | `registry/canvas-text` | React | experimental | 无 | 文字抠成彩色扫线，零依赖 |
-| WobbleCard 摇摆卡片 | `registry/wobble-card` | React | experimental | motion（可拆） | 跟随鼠标轻微位移 |
-| TypewriterEffect 打字机 | `registry/typewriter-effect` | React | experimental | motion | 逐字 / 平滑擦除两个版本 |
-| FloatingDock 浮动 Dock | `registry/floating-dock` | React | experimental | motion, @tabler/icons-react | 鼠标扫过按距离放大 |
-| Button 按钮 | `packages/button` | React + Vue | 规划中 | — | 基础按钮，多形态与加载态 |
-| Modal 弹窗 | `packages/modal` | React + Vue | 规划中 | — | 命令式 + 声明式两种调用 |
-| Toast 轻提示 | `packages/toast` | React + Vue | 规划中 | — | 全局提示，队列与去重 |
-| VirtualList 虚拟列表 | `packages/virtual-list` | React + Vue | 规划中 | — | 大数据量，固定/动态行高 |
-| DragSort 拖拽排序 | `packages/drag-sort` | React + Vue | 规划中 | — | 原生拖拽，横纵向 |
-| ImagePreview 图片预览 | `packages/image-preview` | React + Vue | 规划中 | — | 缩放、旋转、多图 |
-| Upload 上传 | `packages/upload` | React + Vue | 规划中 | — | 拖拽上传、进度、重试 |
-| Countdown 倒计时 | `packages/countdown` | React + Vue | 规划中 | — | 秒级精度，防后台节流 |
+每个组件一份独立文档，固定八节：**效果 → 安装 → 用法 → API → 样式 → 注意事项 → 变更记录 → 出处**。
+点组件名或效果图直接进文档。
+
+### 速查表
+
+| # | 组件 | 包名 | 框架 | 依赖 | 状态 | 文档 |
+| --- | --- | --- | --- | --- | --- | --- |
+| 01 | MacbookScroll 笔记本滚动 | `@hyjkblj/macbook-scroll` | React | motion, @tabler/icons-react | experimental | [文档](registry/macbook-scroll/README.md) |
+| 02 | CanvasText 画布扫线文字 | `@hyjkblj/canvas-text` | React | 无 | experimental | [文档](registry/canvas-text/README.md) |
+| 03 | WobbleCard 摇摆卡片 | `@hyjkblj/wobble-card` | React | motion（可拆） | experimental | [文档](registry/wobble-card/README.md) |
+| 04 | TypewriterEffect 打字机 | `@hyjkblj/typewriter-effect` | React | motion | experimental | [文档](registry/typewriter-effect/README.md) |
+| 05 | FloatingDock 浮动 Dock | `@hyjkblj/floating-dock` | React | motion, @tabler/icons-react | experimental | [文档](registry/floating-dock/README.md) |
 
 **状态**：`规划中` → 想做；`experimental` → 能用，API 可能变；`stable` → 推荐用；`deprecated` → 准备删。
 
-> 这份清单是活的。做完一个就改状态；新想法先进「候选池」，别直接进表。
+---
+
+### 01 · MacbookScroll 笔记本滚动
+
+[![MacbookScroll 效果图](docs/images/macbook-scroll.png)](registry/macbook-scroll/README.md)
+
+页面往下滚，一台 MacBook 从合盖倾斜的状态慢慢「开盖」转正，屏幕里的内容随之展开。适合首屏到正文的过渡。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/macbook-scroll` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion`、`@tabler/icons-react` |
+| 安装 | `pnpm add @hyjkblj/macbook-scroll` |
+| 文档 | [registry/macbook-scroll/README.md](registry/macbook-scroll/README.md) |
+| 源码 | [macbook-scroll.tsx](registry/macbook-scroll/macbook-scroll.tsx) |
+| 效果图 | [docs/images/macbook-scroll.png](docs/images/macbook-scroll.png) |
+| 本地演示 | `pnpm dev` 后访问 `?only=macbook-scroll` |
+
+---
+
+### 02 · CanvasText 画布扫线文字
+
+[![CanvasText 效果图](docs/images/canvas-text.png)](registry/canvas-text/README.md)
+
+把文字变成「从彩色扫描线里挖出来的洞」：canvas 用背景色填出字形，再在字形范围内画一层正弦偏移的横向曲线。**零外部依赖**。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/canvas-text` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | 无（只需 `react` 与包内自带的 `cn`） |
+| 安装 | `pnpm add @hyjkblj/canvas-text` |
+| 文档 | [registry/canvas-text/README.md](registry/canvas-text/README.md) |
+| 源码 | [canvas-text.tsx](registry/canvas-text/canvas-text.tsx) |
+| 效果图 | [docs/images/canvas-text.png](docs/images/canvas-text.png) |
+| 本地演示 | `pnpm dev` 后访问 `?only=canvas-text` |
+
+---
+
+### 03 · WobbleCard 摇摆卡片
+
+[![WobbleCard 效果图](docs/images/wobble-card.png)](registry/wobble-card/README.md)
+
+鼠标在卡片里移动时，卡片朝光标方向轻微位移，离开即弹回。位移只有几十像素，用来做 Bento 网格那种「活的」感觉。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/wobble-card` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion`（实际可拆掉，见文档注意事项） |
+| 安装 | `pnpm add @hyjkblj/wobble-card` |
+| 文档 | [registry/wobble-card/README.md](registry/wobble-card/README.md) |
+| 源码 | [wobble-card.tsx](registry/wobble-card/wobble-card.tsx) |
+| 效果图 | [docs/images/wobble-card.png](docs/images/wobble-card.png) |
+| 本地演示 | `pnpm dev` 后访问 `?only=wobble-card` |
+
+---
+
+### 04 · TypewriterEffect 打字机
+
+[![TypewriterEffect 效果图](docs/images/typewriter-effect.png)](registry/typewriter-effect/README.md)
+
+文字像被「打」出来一样出场，末尾跟一个闪烁光标。导出两个版本：`TypewriterEffect` 逐字符真打字，`TypewriterEffectSmooth` 容器宽度一次性擦除。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/typewriter-effect` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion` |
+| 安装 | `pnpm add @hyjkblj/typewriter-effect` |
+| 文档 | [registry/typewriter-effect/README.md](registry/typewriter-effect/README.md) |
+| 源码 | [typewriter-effect.tsx](registry/typewriter-effect/typewriter-effect.tsx) |
+| 效果图 | [docs/images/typewriter-effect.png](docs/images/typewriter-effect.png) |
+| 本地演示 | `pnpm dev` 后访问 `?only=typewriter-effect` |
+
+---
+
+### 05 · FloatingDock 浮动 Dock
+
+[![FloatingDock 效果图](docs/images/floating-dock.png)](registry/floating-dock/README.md)
+
+macOS 那种 Dock：鼠标横向扫过时，离光标最近的图标被弹簧放大；窄屏自动换成右下角圆按钮 + 向上弹出。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/floating-dock` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion`、`@tabler/icons-react` |
+| 安装 | `pnpm add @hyjkblj/floating-dock` |
+| 文档 | [registry/floating-dock/README.md](registry/floating-dock/README.md) |
+| 源码 | [floating-dock.tsx](registry/floating-dock/floating-dock.tsx) |
+| 效果图 | [docs/images/floating-dock.png](docs/images/floating-dock.png) |
+| 本地演示 | `pnpm dev` 后访问 `?only=floating-dock` |
+
+---
+
+### 自研层（规划中）
+
+还没开始，包名预留 `@hyjkblj/<name>`。做完一个就挪到上面的索引里。
+
+| 组件 | 目标包名 | 框架 | 一句话说明 |
+| --- | --- | --- | --- |
+| Button 按钮 | `@hyjkblj/button` | React + Vue | 基础按钮，多形态与加载态 |
+| Modal 弹窗 | `@hyjkblj/modal` | React + Vue | 命令式 + 声明式两种调用 |
+| Toast 轻提示 | `@hyjkblj/toast` | React + Vue | 全局提示，队列与去重 |
+| VirtualList 虚拟列表 | `@hyjkblj/virtual-list` | React + Vue | 大数据量，固定/动态行高 |
+| DragSort 拖拽排序 | `@hyjkblj/drag-sort` | React + Vue | 原生拖拽，横纵向 |
+| ImagePreview 图片预览 | `@hyjkblj/image-preview` | React + Vue | 缩放、旋转、多图 |
+| Upload 上传 | `@hyjkblj/upload` | React + Vue | 拖拽上传、进度、重试 |
+| Countdown 倒计时 | `@hyjkblj/countdown` | React + Vue | 秒级精度，防后台节流 |
+
+> 这份索引是活的。做完一个就改状态；新想法先进「候选池」，别直接进表。
 > **候选池**：暂无。
 
 ---
@@ -286,7 +395,7 @@ curl -s https://ui.aceternity.com/registry/<name>.json -o /tmp/<name>.json
 2. 截图存到 `docs/images/<name>.png`
 3. 按八节写 `registry/<name>/README.md`（重点写第 7 节：什么情况下别用它）
 4. 把条目注册进 `registry.json`
-5. 根 README 组件清单加一行，状态 `experimental`
+5. 根 README「组件文档索引」加一节：速查表一行 + 效果图卡片，状态 `experimental`
 
 ### 自研组件（packages 层）
 
@@ -296,7 +405,7 @@ curl -s https://ui.aceternity.com/registry/<name>.json -o /tmp/<name>.json
 4. 补边界 demo（长文本 / 空数据 / 极端尺寸）
 5. 截图 → `docs/images/`
 6. 按八节写 `README.md`
-7. 进组件清单，状态 `experimental`
+7. 进「组件文档索引」，状态 `experimental`
 
 > 顺序有意义：**文档和 demo 不是收尾工作**。写不出 demo 的组件，说明它还没被封成组件。
 
@@ -347,7 +456,7 @@ pnpm --filter @hyjkblj/canvas-text publish     # 发单个包
 ```
 
 - 两条分发路径并存：npm 包装得快、能升级；源码复制 / `registry.json` 能直接改
-- 新增组件后必须同步根 README 的「组件清单」，否则没人知道它发了
+- 新增组件后必须同步根 README 的「组件文档索引」，否则没人知道它发了
 
 ---
 

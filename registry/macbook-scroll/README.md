@@ -1,5 +1,6 @@
 # MacbookScroll 笔记本滚动展开
 
+> [← 返回组件索引](../../README.md#组件文档索引)
 > 状态：experimental · 框架：仅 React · 来源：Aceternity UI · 依赖：`motion`、`@tabler/icons-react`
 
 页面往下滚，一台 MacBook 从合盖倾斜的状态慢慢"开盖"转正，屏幕里的内容随之展开。用来做首屏到正文的过渡，或者单纯放一张产品截图装个样子。

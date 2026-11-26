@@ -1,5 +1,6 @@
 # FloatingDock 浮动 Dock
 
+> [← 返回组件索引](../../README.md#组件文档索引)
 > 状态：experimental · 框架：仅 React · 来源：Aceternity UI · 依赖：`motion`、`@tabler/icons-react`
 
 macOS 那种 Dock：一排圆形图标，鼠标横向扫过去时，离光标最近的图标被弹簧放大，远的回落原尺寸。窄屏自动变成右下角一个圆按钮，点开向上弹出图标列表。
