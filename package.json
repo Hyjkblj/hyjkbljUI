@@ -1,0 +1,35 @@
+{
+  "name": "hycomponents",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "description": "自用前端组件集 · React & Vue · 一组件一子包",
+  "scripts": {
+    "dev": "pnpm --filter playground dev",
+    "build": "pnpm run build:pkgs && pnpm --filter playground build",
+    "build:pkgs": "tsup",
+    "build:playground": "pnpm --filter playground build",
+    "preview": "pnpm --filter playground preview"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "dependencies": {
+    "@tabler/icons-react": "^3.53.0",
+    "clsx": "^2.1.1",
+    "motion": "^14.14.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwind-merge": "^3.7.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.5",
+    "@types/react": "^19.3.3",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "tailwindcss": "^4.3.5",
+    "tsup": "^8.5.0",
+    "typescript": "^5.7.3",
+    "vite": "^8.3.8"
+  }
+}

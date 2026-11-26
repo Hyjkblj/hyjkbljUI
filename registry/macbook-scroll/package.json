@@ -1,0 +1,42 @@
+{
+  "name": "@hyjkblj/macbook-scroll",
+  "version": "0.1.0",
+  "description": "滚动驱动的 MacBook 开盖动效。仅 React，依赖 motion 与 @tabler/icons-react。",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "macbook-scroll.tsx",
+    "README.md"
+  ],
+  "main": "./dist/macbook-scroll.js",
+  "module": "./dist/macbook-scroll.js",
+  "types": "./dist/macbook-scroll.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/macbook-scroll.d.ts",
+      "import": "./dist/macbook-scroll.js",
+      "default": "./dist/macbook-scroll.js"
+    },
+    "./source": "./macbook-scroll.tsx",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "pnpm -w run build:pkgs",
+    "prepublishOnly": "pnpm -w run build:pkgs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.7.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "motion": ">=11",
+    "@tabler/icons-react": ">=3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

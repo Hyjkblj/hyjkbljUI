@@ -1,0 +1,41 @@
+{
+  "name": "@hyjkblj/typewriter-effect",
+  "version": "0.1.0",
+  "description": "打字机文字，含逐字与平滑擦除两个版本。仅 React，依赖 motion。",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "typewriter-effect.tsx",
+    "README.md"
+  ],
+  "main": "./dist/typewriter-effect.js",
+  "module": "./dist/typewriter-effect.js",
+  "types": "./dist/typewriter-effect.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/typewriter-effect.d.ts",
+      "import": "./dist/typewriter-effect.js",
+      "default": "./dist/typewriter-effect.js"
+    },
+    "./source": "./typewriter-effect.tsx",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "pnpm -w run build:pkgs",
+    "prepublishOnly": "pnpm -w run build:pkgs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.7.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "motion": ">=11"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

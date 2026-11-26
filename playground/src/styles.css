@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* 收录层源码在 playground 之外，Tailwind v4 需要显式声明扫描范围 */
+@source "../../registry";
+
+/* 用 .dark 类控制暗色，避免依赖系统主题 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #0b0b0f;
+  color: #fafafa;
+  font-family:
+    ui-sans-serif, system-ui, -apple-system, "Segoe UI", "PingFang SC",
+    "Microsoft YaHei", sans-serif;
+}

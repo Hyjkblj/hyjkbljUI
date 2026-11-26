@@ -1,0 +1,11 @@
+packages:
+  - "packages/*"
+  - "registry/*"
+  - "playground"
+
+# esbuild 用可选依赖拿平台二进制，不需要安装脚本
+ignoredBuiltDependencies:
+  - esbuild
+
+# 不在每次 pnpm run 前自动跑 install（否则会被上面的 ignored builds 卡住）
+verifyDepsBeforeRun: false

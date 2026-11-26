@@ -1,0 +1,41 @@
+{
+  "name": "@hyjkblj/wobble-card",
+  "version": "0.1.0",
+  "description": "跟随鼠标轻微位移的卡片。仅 React，依赖 motion。",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "wobble-card.tsx",
+    "README.md"
+  ],
+  "main": "./dist/wobble-card.js",
+  "module": "./dist/wobble-card.js",
+  "types": "./dist/wobble-card.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/wobble-card.d.ts",
+      "import": "./dist/wobble-card.js",
+      "default": "./dist/wobble-card.js"
+    },
+    "./source": "./wobble-card.tsx",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "pnpm -w run build:pkgs",
+    "prepublishOnly": "pnpm -w run build:pkgs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.7.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "motion": ">=11"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

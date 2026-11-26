@@ -1,0 +1,47 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "hycomponents",
+  "homepage": "",
+  "items": [
+    {
+      "name": "macbook-scroll",
+      "type": "registry:ui",
+      "title": "MacbookScroll",
+      "description": "滚动驱动的 MacBook 开盖动效。仅 React，依赖 motion 与 @tabler/icons-react。",
+      "dependencies": ["motion", "@tabler/icons-react"],
+      "files": [{ "path": "registry/macbook-scroll/macbook-scroll.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "canvas-text",
+      "type": "registry:ui",
+      "title": "CanvasText",
+      "description": "用 canvas 合成模式把文字抠成彩色扫线。仅 React，零依赖。",
+      "dependencies": [],
+      "files": [{ "path": "registry/canvas-text/canvas-text.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "wobble-card",
+      "type": "registry:ui",
+      "title": "WobbleCard",
+      "description": "跟随鼠标轻微位移的卡片。仅 React，依赖 motion（可拆）。",
+      "dependencies": ["motion"],
+      "files": [{ "path": "registry/wobble-card/wobble-card.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "typewriter-effect",
+      "type": "registry:ui",
+      "title": "TypewriterEffect",
+      "description": "打字机文字，含逐字与平滑擦除两个版本。仅 React，依赖 motion。",
+      "dependencies": ["motion"],
+      "files": [{ "path": "registry/typewriter-effect/typewriter-effect.tsx", "type": "registry:ui" }]
+    },
+    {
+      "name": "floating-dock",
+      "type": "registry:ui",
+      "title": "FloatingDock",
+      "description": "macOS 风格 Dock，鼠标扫过按距离放大，窄屏切成弹出菜单。仅 React，依赖 motion 与 @tabler/icons-react。",
+      "dependencies": ["motion", "@tabler/icons-react"],
+      "files": [{ "path": "registry/floating-dock/floating-dock.tsx", "type": "registry:ui" }]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "moduleResolution": "bundler",
+    "baseUrl": ".",
+    "paths": {
+      "@/lib/utils": ["./shims/cn.ts"]
+    }
+  },
+  "include": ["registry/**/*.tsx", "shims/**/*.ts", "tsup.config.ts"]
+}

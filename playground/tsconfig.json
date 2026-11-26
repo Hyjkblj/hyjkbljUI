@@ -1,0 +1,22 @@
+{
+  "extends": "../tsconfig.base.json",
+  "include": [
+    "src",
+    "vite.config.ts",
+    "../registry/**/*.tsx"
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@registry/*": [
+        "../registry/*"
+      ]
+    },
+    "types": [
+      "vite/client"
+    ]
+  }
+}
