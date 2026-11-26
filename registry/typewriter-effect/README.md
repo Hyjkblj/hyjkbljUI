@@ -1,6 +1,6 @@
 # TypewriterEffect 打字机文字
 
-> [← 返回组件索引](../../README.md#组件文档索引)
+> [← 返回组件索引](../../docs/COMPONENTS.md)
 > 状态：experimental · 框架：仅 React · 来源：Aceternity UI · 依赖：`motion`
 
 一段文字像被"打"出来一样逐字出场，末尾跟一个闪烁光标。组件导出两个版本，动画机制完全不同，选错会很别扭。
