@@ -92,6 +92,21 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "text-animate",
+      "type": "registry:ui",
+      "title": "TextAnimate",
+      "description": "逐字 / 逐词 / 逐行出场的文字动画，10 种预设。仅 React，依赖 motion。",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/text-animate/text-animate.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

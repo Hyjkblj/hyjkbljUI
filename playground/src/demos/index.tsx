@@ -5,6 +5,7 @@ import { WobbleCardDemo } from "./wobble-card";
 import { TypewriterEffectDemo } from "./typewriter-effect";
 import { FloatingDockDemo } from "./floating-dock";
 import { AnimatedThemeTogglerDemo } from "./animated-theme-toggler";
+import { TextAnimateDemo } from "./text-animate";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -12,6 +13,7 @@ import wobbleCardSource from "@registry/wobble-card/wobble-card.tsx?raw";
 import typewriterEffectSource from "@registry/typewriter-effect/typewriter-effect.tsx?raw";
 import floatingDockSource from "@registry/floating-dock/floating-dock.tsx?raw";
 import animatedThemeTogglerSource from "@registry/animated-theme-toggler/animated-theme-toggler.tsx?raw";
+import textAnimateSource from "@registry/text-animate/text-animate.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -179,6 +181,27 @@ export function Header() {
 }`,
     source: animatedThemeTogglerSource,
     Render: AnimatedThemeTogglerDemo,
+  },
+  {
+    id: "text-animate",
+    index: "07",
+    name: "text-animate",
+    title: "文字出场动画",
+    summary: "按字 / 词 / 行切分，10 种出场预设，滚进视口才播，可选只播一次。",
+    stack: "React · motion",
+    deps: ["motion"],
+    install: `pnpm add @hyjkblj/text-animate motion`,
+    usage: `import { TextAnimate } from "@hyjkblj/text-animate";
+
+export function Hero() {
+  return (
+    <TextAnimate animation="blurInUp" by="character" once>
+      逐字模糊浮现
+    </TextAnimate>
+  );
+}`,
+    source: textAnimateSource,
+    Render: TextAnimateDemo,
   },
 ];
 

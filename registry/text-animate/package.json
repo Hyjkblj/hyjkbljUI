@@ -1,0 +1,41 @@
+{
+  "name": "@hyjkblj/text-animate",
+  "version": "0.1.0",
+  "description": "逐字 / 逐词 / 逐行出场的文字动画，10 种预设。仅 React，依赖 motion。",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "text-animate.tsx",
+    "README.md"
+  ],
+  "main": "./dist/text-animate.js",
+  "module": "./dist/text-animate.js",
+  "types": "./dist/text-animate.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/text-animate.d.ts",
+      "import": "./dist/text-animate.js",
+      "default": "./dist/text-animate.js"
+    },
+    "./source": "./text-animate.tsx",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "pnpm -w run build:pkgs",
+    "prepublishOnly": "pnpm -w run build:pkgs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.7.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "motion": ">=11"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

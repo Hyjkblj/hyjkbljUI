@@ -15,6 +15,7 @@
 | 04 | TypewriterEffect 打字机 | `@hyjkblj/typewriter-effect` | React | motion | experimental | [文档](../registry/typewriter-effect/README.md) |
 | 05 | FloatingDock 浮动 Dock | `@hyjkblj/floating-dock` | React | motion, @tabler/icons-react | experimental | [文档](../registry/floating-dock/README.md) |
 | 06 | AnimatedThemeToggler 动画主题切换 | `@hyjkblj/animated-theme-toggler` | React | lucide-react | experimental | [文档](../registry/animated-theme-toggler/README.md) |
+| 07 | TextAnimate 文字出场动画 | `@hyjkblj/text-animate` | React | motion | experimental | [文档](../registry/text-animate/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -131,6 +132,25 @@ macOS 那种 Dock：鼠标横向扫过时，离光标最近的图标被弹簧放
 | 源码 | [animated-theme-toggler.tsx](../registry/animated-theme-toggler/animated-theme-toggler.tsx) |
 | 效果图 | [docs/images/animated-theme-toggler.png](images/animated-theme-toggler.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/animated-theme-toggler`；截图用 `?only=animated-theme-toggler` |
+
+---
+
+## 07 · TextAnimate 文字出场动画
+
+[![TextAnimate 效果图](images/text-animate.png)](../registry/text-animate/README.md)
+
+按字 / 词 / 行切分，10 种出场预设（模糊、位移、缩放）。滚进视口才播，可设只播一次。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/text-animate` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion` |
+| 安装 | `pnpm add @hyjkblj/text-animate motion` |
+| 文档 | [registry/text-animate/README.md](../registry/text-animate/README.md) |
+| 源码 | [text-animate.tsx](../registry/text-animate/text-animate.tsx) |
+| 效果图 | [docs/images/text-animate.png](images/text-animate.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/text-animate`；截图用 `?only=text-animate` |
 
 ---
 

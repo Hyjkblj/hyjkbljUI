@@ -36,4 +36,5 @@ export default defineConfig([
   pkg("typewriter-effect", ["motion", "motion/react"]),
   pkg("floating-dock", ["motion", "motion/react", "@tabler/icons-react"]),
   pkg("animated-theme-toggler", ["lucide-react", "react-dom"]),
+  pkg("text-animate", ["motion", "motion/react"]),
 ]);

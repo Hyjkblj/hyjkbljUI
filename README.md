@@ -45,6 +45,7 @@
 | [TypewriterEffect](registry/typewriter-effect/README.md) | `@hyjkblj/typewriter-effect` | motion | 打字机文字，两个版本 |
 | [FloatingDock](registry/floating-dock/README.md) | `@hyjkblj/floating-dock` | motion, @tabler/icons-react | macOS 风格 Dock |
 | [AnimatedThemeToggler](registry/animated-theme-toggler/README.md) | `@hyjkblj/animated-theme-toggler` | lucide-react | 形变动画的主题切换 |
+| [TextAnimate](registry/text-animate/README.md) | `@hyjkblj/text-animate` | motion | 逐字 / 逐词 / 逐行的文字动画 |
 
 完整索引（效果图 + 源码链接 + 本地演示方式）：**[docs/COMPONENTS.md](docs/COMPONENTS.md)**
 
