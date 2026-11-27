@@ -1,0 +1,40 @@
+{
+  "name": "@hyjkblj/morphing-search",
+  "version": "0.1.0",
+  "description": "从输入框或图标形变成玻璃质感结果面板的搜索组件，支持快捷键唤起与键盘操作。仅 React，依赖 motion 与 lucide-react。",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "morphing-search.tsx",
+    "lib",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/morphing-search.d.ts",
+      "import": "./dist/morphing-search.js",
+      "default": "./dist/morphing-search.js"
+    },
+    "./source": "./morphing-search.tsx",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "pnpm -w run build:pkgs",
+    "prepublishOnly": "pnpm -w run build:pkgs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.7.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "motion": ">=11",
+    "lucide-react": ">=0.400"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

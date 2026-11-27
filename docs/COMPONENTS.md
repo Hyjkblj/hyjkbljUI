@@ -20,6 +20,7 @@
 | 09 | FloatingPanel 浮动面板 | `@hyjkblj/floating-panel` | React | motion, lucide-react | experimental | [文档](../registry/floating-panel/README.md) |
 | 10 | Select 动画下拉选择 | `@hyjkblj/select` | React | motion, lucide-react | experimental | [文档](../registry/select/README.md) |
 | 11 | ExpandableActionBar 可展开工具条 | `@hyjkblj/expandable-action-bar` | React | motion, lucide-react | experimental | [文档](../registry/expandable-action-bar/README.md) |
+| 12 | MorphingSearch 形变搜索 | `@hyjkblj/morphing-search` | React | motion, lucide-react | experimental | [文档](../registry/morphing-search/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -231,6 +232,25 @@ macOS 那种 Dock：鼠标横向扫过时，离光标最近的图标被弹簧放
 | 源码 | [expandable-action-bar.tsx](../registry/expandable-action-bar/expandable-action-bar.tsx) |
 | 效果图 | [docs/images/expandable-action-bar.png](images/expandable-action-bar.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/expandable-action-bar`；截图用 `?only=expandable-action-bar` |
+
+---
+
+## 12 · MorphingSearch 形变搜索
+
+[![MorphingSearch 效果图](images/morphing-search.png)](../registry/morphing-search/README.md)
+
+输入框或图标点开后形变成玻璃结果面板，支持快捷键唤起、键盘导航与关键词匹配。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/morphing-search` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion`、`lucide-react` |
+| 安装 | `pnpm add @hyjkblj/morphing-search motion lucide-react` |
+| 文档 | [registry/morphing-search/README.md](../registry/morphing-search/README.md) |
+| 源码 | [morphing-search.tsx](../registry/morphing-search/morphing-search.tsx) |
+| 效果图 | [docs/images/morphing-search.png](images/morphing-search.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/morphing-search`；截图用 `?only=morphing-search` |
 
 ---
 

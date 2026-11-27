@@ -172,6 +172,22 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "morphing-search",
+      "type": "registry:ui",
+      "title": "MorphingSearch",
+      "description": "从输入框或图标形变成玻璃结果面板的搜索，支持快捷键唤起。仅 React，依赖 motion 与 lucide-react。",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/morphing-search/morphing-search.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

@@ -10,6 +10,7 @@ import { SkeletonDemo } from "./skeleton";
 import { FloatingPanelDemo } from "./floating-panel";
 import { SelectDemo } from "./select";
 import { ExpandableActionBarDemo } from "./expandable-action-bar";
+import { MorphingSearchDemo } from "./morphing-search";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -22,6 +23,7 @@ import skeletonSource from "@registry/skeleton/skeleton.tsx?raw";
 import floatingPanelSource from "@registry/floating-panel/floating-panel.tsx?raw";
 import selectSource from "@registry/select/select.tsx?raw";
 import expandableActionBarSource from "@registry/expandable-action-bar/expandable-action-bar.tsx?raw";
+import morphingSearchSource from "@registry/morphing-search/morphing-search.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -332,6 +334,28 @@ const items: ExpandableActionBarItem[] = [
 />;`,
     source: expandableActionBarSource,
     Render: ExpandableActionBarDemo,
+  },
+  {
+    id: "morphing-search",
+    index: "12",
+    name: "morphing-search",
+    title: "形变搜索",
+    summary: "输入框或图标点开就形变成玻璃质感结果面板，支持快捷键唤起、键盘导航与关键词匹配。",
+    stack: "React · motion",
+    deps: ["motion", "lucide-react"],
+    install: `pnpm add @hyjkblj/morphing-search motion lucide-react`,
+    usage: `import { MorphingSearch, type MorphingSearchItem } from "@hyjkblj/morphing-search";
+
+const items: MorphingSearchItem[] = [
+  { id: "a", title: "Project Folder", description: "Block · Files", keywords: ["files"], icon: FolderOpen },
+];
+
+<MorphingSearch items={items} placeholder="搜索" shortcut="f" />;
+
+// 只显示图标
+<MorphingSearch items={items} iconOnly shortcut="" />;`,
+    source: morphingSearchSource,
+    Render: MorphingSearchDemo,
   },
 ];
 
