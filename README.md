@@ -47,6 +47,7 @@
 | [AnimatedThemeToggler](registry/animated-theme-toggler/README.md) | `@hyjkblj/animated-theme-toggler` | lucide-react | 形变动画的主题切换 |
 | [TextAnimate](registry/text-animate/README.md) | `@hyjkblj/text-animate` | motion | 逐字 / 逐词 / 逐行的文字动画 |
 | [Skeleton](registry/skeleton/README.md) | `@hyjkblj/skeleton` | 无 | 扫光式骨架屏 |
+| [FloatingPanel](registry/floating-panel/README.md) | `@hyjkblj/floating-panel` | motion, lucide-react | 从按钮位置展开的浮动面板 |
 
 完整索引（效果图 + 源码链接 + 本地演示方式）：**[docs/COMPONENTS.md](docs/COMPONENTS.md)**
 

@@ -1,0 +1,42 @@
+{
+  "name": "@hyjkblj/floating-panel",
+  "version": "0.1.0",
+  "description": "从触发按钮位置展开的浮动面板，layoutId 形变 + 模糊遮罩。仅 React，依赖 motion 与 lucide-react。",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "floating-panel.tsx",
+    "README.md"
+  ],
+  "main": "./dist/floating-panel.js",
+  "module": "./dist/floating-panel.js",
+  "types": "./dist/floating-panel.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/floating-panel.d.ts",
+      "import": "./dist/floating-panel.js",
+      "default": "./dist/floating-panel.js"
+    },
+    "./source": "./floating-panel.tsx",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "pnpm -w run build:pkgs",
+    "prepublishOnly": "pnpm -w run build:pkgs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.7.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "motion": ">=11",
+    "lucide-react": ">=0.400"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

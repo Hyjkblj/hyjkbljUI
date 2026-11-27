@@ -38,4 +38,5 @@ export default defineConfig([
   pkg("animated-theme-toggler", ["lucide-react", "react-dom"]),
   pkg("text-animate", ["motion", "motion/react"]),
   pkg("skeleton", []),
+  pkg("floating-panel", ["motion", "motion/react", "lucide-react"]),
 ]);

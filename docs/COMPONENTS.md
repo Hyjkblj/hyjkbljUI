@@ -17,6 +17,7 @@
 | 06 | AnimatedThemeToggler 动画主题切换 | `@hyjkblj/animated-theme-toggler` | React | lucide-react | experimental | [文档](../registry/animated-theme-toggler/README.md) |
 | 07 | TextAnimate 文字出场动画 | `@hyjkblj/text-animate` | React | motion | experimental | [文档](../registry/text-animate/README.md) |
 | 08 | Skeleton 骨架屏 | `@hyjkblj/skeleton` | React | 无 | experimental | [文档](../registry/skeleton/README.md) |
+| 09 | FloatingPanel 浮动面板 | `@hyjkblj/floating-panel` | React | motion, lucide-react | experimental | [文档](../registry/floating-panel/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -171,6 +172,25 @@ macOS 那种 Dock：鼠标横向扫过时，离光标最近的图标被弹簧放
 | 源码 | [skeleton.tsx](../registry/skeleton/skeleton.tsx) |
 | 效果图 | [docs/images/skeleton.png](images/skeleton.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/skeleton`；截图用 `?only=skeleton` |
+
+---
+
+## 09 · FloatingPanel 浮动面板
+
+[![FloatingPanel 效果图](images/floating-panel.png)](../registry/floating-panel/README.md)
+
+从触发按钮位置展开的面板：按钮经 `layoutId` 形变成标题栏，背景压一层模糊遮罩。12 个组合件，能拼表单 / 取色器 / 快捷菜单。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/floating-panel` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion`、`lucide-react` |
+| 安装 | `pnpm add @hyjkblj/floating-panel motion lucide-react` |
+| 文档 | [registry/floating-panel/README.md](../registry/floating-panel/README.md) |
+| 源码 | [floating-panel.tsx](../registry/floating-panel/floating-panel.tsx) |
+| 效果图 | [docs/images/floating-panel.png](images/floating-panel.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/floating-panel`；截图用 `?only=floating-panel` |
 
 ---
 

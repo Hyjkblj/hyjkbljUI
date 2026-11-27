@@ -120,6 +120,22 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "floating-panel",
+      "type": "registry:ui",
+      "title": "FloatingPanel",
+      "description": "从触发按钮位置展开的浮动面板，layoutId 形变 + 模糊遮罩。仅 React，依赖 motion 与 lucide-react。",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/floating-panel/floating-panel.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

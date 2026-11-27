@@ -7,6 +7,7 @@ import { FloatingDockDemo } from "./floating-dock";
 import { AnimatedThemeTogglerDemo } from "./animated-theme-toggler";
 import { TextAnimateDemo } from "./text-animate";
 import { SkeletonDemo } from "./skeleton";
+import { FloatingPanelDemo } from "./floating-panel";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -16,6 +17,7 @@ import floatingDockSource from "@registry/floating-dock/floating-dock.tsx?raw";
 import animatedThemeTogglerSource from "@registry/animated-theme-toggler/animated-theme-toggler.tsx?raw";
 import textAnimateSource from "@registry/text-animate/text-animate.tsx?raw";
 import skeletonSource from "@registry/skeleton/skeleton.tsx?raw";
+import floatingPanelSource from "@registry/floating-panel/floating-panel.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -229,6 +231,42 @@ export function CardSkeleton() {
 }`,
     source: skeletonSource,
     Render: SkeletonDemo,
+  },
+  {
+    id: "floating-panel",
+    index: "09",
+    name: "floating-panel",
+    title: "浮动面板",
+    summary: "从触发按钮位置展开的面板，layoutId 形变 + 模糊遮罩，可组合成表单 / 取色器 / 快捷菜单。",
+    stack: "React · motion",
+    deps: ["motion", "lucide-react"],
+    install: `pnpm add @hyjkblj/floating-panel motion lucide-react`,
+    usage: `import {
+  FloatingPanelRoot,
+  FloatingPanelTrigger,
+  FloatingPanelContent,
+  FloatingPanelBody,
+  FloatingPanelFooter,
+  FloatingPanelCloseButton,
+} from "@hyjkblj/floating-panel";
+
+export function Actions() {
+  return (
+    <FloatingPanelRoot>
+      <FloatingPanelTrigger title="快捷操作" className="rounded-md border px-4 py-2">
+        <span>快捷操作</span>
+      </FloatingPanelTrigger>
+      <FloatingPanelContent className="w-56">
+        <FloatingPanelBody>...</FloatingPanelBody>
+        <FloatingPanelFooter>
+          <FloatingPanelCloseButton />
+        </FloatingPanelFooter>
+      </FloatingPanelContent>
+    </FloatingPanelRoot>
+  );
+}`,
+    source: floatingPanelSource,
+    Render: FloatingPanelDemo,
   },
 ];
 
