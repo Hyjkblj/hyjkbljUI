@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
 import { Sidebar } from "@/components/Sidebar";
-import { DEMOS, docUrl, sourceUrl, REPO_URL, type DemoMeta } from "@/demos";
+import { CodeBlock } from "@/components/CodeBlock";
+import { DEMOS, REPO_URL, type DemoMeta } from "@/demos";
 
 const IDS = DEMOS.map((d) => d.id);
 
@@ -10,7 +10,7 @@ function readHash(): string {
   return IDS.includes(raw) ? raw : IDS[0];
 }
 
-/** 组件信息条：编号 / 名称 / 依赖 / 外链 */
+/** 组件信息条：编号 / 名称 / 依赖 */
 function DemoHeader({ demo }: { demo: DemoMeta }) {
   return (
     <header className="border-b border-neutral-800 px-6 py-8 lg:px-12 lg:py-10">
@@ -39,28 +39,54 @@ function DemoHeader({ demo }: { demo: DemoMeta }) {
             </span>
           ))
         )}
-        <a
-          href={docUrl(demo.id)}
-          target="_blank"
-          rel="noreferrer"
-          className="ml-1 rounded-full border border-neutral-700 px-2.5 py-1 text-neutral-300 transition-colors hover:border-neutral-500 hover:text-white"
-        >
-          文档 ↗
-        </a>
-        <a
-          href={sourceUrl(demo.id)}
-          target="_blank"
-          rel="noreferrer"
-          className="rounded-full border border-neutral-800 px-2.5 py-1 text-neutral-400 transition-colors hover:border-neutral-600 hover:text-neutral-200"
-        >
-          源码 ↗
-        </a>
       </div>
     </header>
   );
 }
 
-/** 截图模式：?only=<id> 只渲染该组件，不带侧栏与外壳 */
+function SectionTitle({ children, hint }: { children: string; hint?: string }) {
+  return (
+    <div className="mb-4 flex items-baseline gap-3">
+      <h2 className="text-sm font-semibold tracking-wide text-neutral-100">{children}</h2>
+      {hint && <span className="text-[11.5px] text-neutral-600">{hint}</span>}
+    </div>
+  );
+}
+
+/** 用法 + 源码：直接内联在演示页里 */
+function DemoDocs({ demo }: { demo: DemoMeta }) {
+  return (
+    <>
+      <section
+        id="usage"
+        className="scroll-mt-4 border-t border-neutral-800 px-6 py-10 lg:px-12"
+      >
+        <SectionTitle hint="装包 → 引入 → 传 props">用法</SectionTitle>
+        <div className="grid gap-4 lg:max-w-3xl">
+          <CodeBlock code={demo.install} lang="bash" title="安装" />
+          <CodeBlock code={demo.usage} lang="tsx" title="最小示例" />
+        </div>
+      </section>
+
+      <section
+        id="source"
+        className="scroll-mt-4 border-t border-neutral-800 px-6 py-10 lg:px-12"
+      >
+        <SectionTitle hint={`${demo.source.split("\n").length} 行 · 收录时原样保留`}>
+          源码
+        </SectionTitle>
+        <CodeBlock
+          code={demo.source}
+          lang="tsx"
+          title={`registry/${demo.id}/${demo.id}.tsx`}
+          maxHeight="38rem"
+        />
+      </section>
+    </>
+  );
+}
+
+/** 截图模式：?only=<id> 只渲染组件本身，不带侧栏、用法与源码 */
 function Standalone({ demo }: { demo: DemoMeta }) {
   useEffect(() => {
     const y = Number(new URLSearchParams(window.location.search).get("scroll") ?? 0);
@@ -98,14 +124,12 @@ function Shell() {
 
   return (
     <div className="min-h-screen bg-[#0B0B0F] text-neutral-200">
-      {/* 桌面侧栏 */}
       <Sidebar
         active={demo.id}
         onSelect={select}
         className="fixed inset-y-0 left-0 z-30 hidden lg:flex"
       />
 
-      {/* 移动端抽屉 */}
       {drawer && (
         <div className="fixed inset-0 z-40 lg:hidden">
           <div
@@ -121,7 +145,6 @@ function Shell() {
       )}
 
       <div className="lg:pl-64">
-        {/* 移动端顶栏 */}
         <div className="sticky top-0 z-20 flex items-center gap-3 border-b border-neutral-800 bg-[#0B0B0F]/90 px-4 py-3 backdrop-blur lg:hidden">
           <button
             onClick={() => setDrawer(true)}
@@ -136,11 +159,13 @@ function Shell() {
 
         <DemoHeader demo={demo} />
 
-        <main key={demo.id} className="min-h-[60vh]">
+        <main key={demo.id} className="min-h-[50vh]">
           <Render />
         </main>
 
-        <footer className="mt-8 border-t border-neutral-800 px-6 py-8 text-xs text-neutral-600 lg:px-12">
+        <DemoDocs demo={demo} />
+
+        <footer className="border-t border-neutral-800 px-6 py-8 text-xs text-neutral-600 lg:px-12">
           <p>
             演示站 · {DEMOS.length} 个组件 ·{" "}
             <a
