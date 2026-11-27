@@ -69,21 +69,21 @@ export function CodeBlock({ code, lang = "tsx", title, className, maxHeight }: P
   return (
     <div
       className={cn(
-        "overflow-hidden rounded-lg border border-neutral-800 bg-[#0D0D12]",
+        "overflow-hidden rounded-lg border border-neutral-200 bg-neutral-50 dark:border-neutral-800 dark:bg-[#0D0D12]",
         className,
       )}
     >
-      <div className="flex items-center justify-between border-b border-neutral-800 px-3 py-2">
+      <div className="flex items-center justify-between border-b border-neutral-200 px-3 py-2 dark:border-neutral-800">
         <span className="font-mono text-[11px] text-neutral-500">{title ?? lang}</span>
         <button
           onClick={copy}
-          className="rounded border border-neutral-800 px-2 py-0.5 font-mono text-[11px] text-neutral-400 transition-colors hover:border-neutral-600 hover:text-neutral-200"
+          className="rounded border border-neutral-300 px-2 py-0.5 font-mono text-[11px] text-neutral-500 transition-colors hover:border-neutral-400 hover:text-neutral-800 dark:border-neutral-800 dark:text-neutral-400 dark:hover:border-neutral-600 dark:hover:text-neutral-200"
         >
           {copied ? "已复制" : "复制"}
         </button>
       </div>
       <pre
-        className="overflow-auto p-4 text-[12.5px] leading-[1.65] text-neutral-300"
+        className="overflow-auto p-4 text-[12.5px] leading-[1.65] text-neutral-700 dark:text-neutral-300"
         style={maxHeight ? { maxHeight } : undefined}
       >
         <code

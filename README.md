@@ -44,6 +44,7 @@
 | [WobbleCard](registry/wobble-card/README.md) | `@hyjkblj/wobble-card` | motion | 跟随鼠标轻微位移的卡片 |
 | [TypewriterEffect](registry/typewriter-effect/README.md) | `@hyjkblj/typewriter-effect` | motion | 打字机文字，两个版本 |
 | [FloatingDock](registry/floating-dock/README.md) | `@hyjkblj/floating-dock` | motion, @tabler/icons-react | macOS 风格 Dock |
+| [AnimatedThemeToggler](registry/animated-theme-toggler/README.md) | `@hyjkblj/animated-theme-toggler` | lucide-react | 形变动画的主题切换 |
 
 完整索引（效果图 + 源码链接 + 本地演示方式）：**[docs/COMPONENTS.md](docs/COMPONENTS.md)**
 

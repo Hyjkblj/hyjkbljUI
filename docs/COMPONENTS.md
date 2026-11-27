@@ -14,6 +14,7 @@
 | 03 | WobbleCard 摇摆卡片 | `@hyjkblj/wobble-card` | React | motion（可拆） | experimental | [文档](../registry/wobble-card/README.md) |
 | 04 | TypewriterEffect 打字机 | `@hyjkblj/typewriter-effect` | React | motion | experimental | [文档](../registry/typewriter-effect/README.md) |
 | 05 | FloatingDock 浮动 Dock | `@hyjkblj/floating-dock` | React | motion, @tabler/icons-react | experimental | [文档](../registry/floating-dock/README.md) |
+| 06 | AnimatedThemeToggler 动画主题切换 | `@hyjkblj/animated-theme-toggler` | React | lucide-react | experimental | [文档](../registry/animated-theme-toggler/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -111,6 +112,25 @@ macOS 那种 Dock：鼠标横向扫过时，离光标最近的图标被弹簧放
 | 源码 | [floating-dock.tsx](../registry/floating-dock/floating-dock.tsx) |
 | 效果图 | [docs/images/floating-dock.png](images/floating-dock.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/floating-dock`；截图用 `?only=floating-dock` |
+
+---
+
+## 06 · AnimatedThemeToggler 动画主题切换
+
+[![AnimatedThemeToggler 效果图](images/animated-theme-toggler.png)](../registry/animated-theme-toggler/README.md)
+
+点一下，新主题以 clip-path 形变从按钮中心铺满视口。七种形状，走浏览器原生 View Transitions API。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/animated-theme-toggler` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `lucide-react` |
+| 安装 | `pnpm add @hyjkblj/animated-theme-toggler lucide-react` |
+| 文档 | [registry/animated-theme-toggler/README.md](../registry/animated-theme-toggler/README.md) |
+| 源码 | [animated-theme-toggler.tsx](../registry/animated-theme-toggler/animated-theme-toggler.tsx) |
+| 效果图 | [docs/images/animated-theme-toggler.png](images/animated-theme-toggler.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/animated-theme-toggler`；截图用 `?only=animated-theme-toggler` |
 
 ---
 

@@ -10,30 +10,35 @@ function readHash(): string {
   return IDS.includes(raw) ? raw : IDS[0];
 }
 
-/** 组件信息条：编号 / 名称 / 依赖 */
 function DemoHeader({ demo }: { demo: DemoMeta }) {
   return (
-    <header className="border-b border-neutral-800 px-6 py-8 lg:px-12 lg:py-10">
+    <header className="border-b border-neutral-200 px-6 py-8 lg:px-12 lg:py-10 dark:border-neutral-800">
       <p className="text-[11px] tracking-[0.18em] text-neutral-500 uppercase">
         组件 {demo.index} · {demo.stack}
       </p>
-      <h1 className="mt-2 text-2xl font-semibold text-neutral-100">{demo.title}</h1>
-      <code className="mt-1 inline-block font-mono text-[13px] text-sky-400">{demo.name}</code>
-      <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-400">{demo.summary}</p>
+      <h1 className="mt-2 text-2xl font-semibold text-neutral-900 dark:text-neutral-100">
+        {demo.title}
+      </h1>
+      <code className="mt-1 inline-block font-mono text-[13px] text-sky-600 dark:text-sky-400">
+        {demo.name}
+      </code>
+      <p className="mt-3 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">
+        {demo.summary}
+      </p>
 
       <div className="mt-4 flex flex-wrap items-center gap-2 text-[11.5px]">
-        <span className="rounded-full border border-neutral-800 px-2.5 py-1 text-neutral-400">
+        <span className="rounded-full border border-neutral-200 px-2.5 py-1 text-neutral-600 dark:border-neutral-800 dark:text-neutral-400">
           React
         </span>
         {demo.deps.length === 0 ? (
-          <span className="rounded-full border border-emerald-900/60 bg-emerald-500/10 px-2.5 py-1 text-emerald-400">
+          <span className="rounded-full border border-emerald-300 bg-emerald-50 px-2.5 py-1 text-emerald-700 dark:border-emerald-900/60 dark:bg-emerald-500/10 dark:text-emerald-400">
             零依赖
           </span>
         ) : (
           demo.deps.map((d) => (
             <span
               key={d}
-              className="rounded-full border border-neutral-800 px-2.5 py-1 font-mono text-neutral-400"
+              className="rounded-full border border-neutral-200 px-2.5 py-1 font-mono text-neutral-600 dark:border-neutral-800 dark:text-neutral-400"
             >
               {d}
             </span>
@@ -47,8 +52,10 @@ function DemoHeader({ demo }: { demo: DemoMeta }) {
 function SectionTitle({ children, hint }: { children: string; hint?: string }) {
   return (
     <div className="mb-4 flex items-baseline gap-3">
-      <h2 className="text-sm font-semibold tracking-wide text-neutral-100">{children}</h2>
-      {hint && <span className="text-[11.5px] text-neutral-600">{hint}</span>}
+      <h2 className="text-sm font-semibold tracking-wide text-neutral-900 dark:text-neutral-100">
+        {children}
+      </h2>
+      {hint && <span className="text-[11.5px] text-neutral-500 dark:text-neutral-600">{hint}</span>}
     </div>
   );
 }
@@ -59,7 +66,7 @@ function DemoDocs({ demo }: { demo: DemoMeta }) {
     <>
       <section
         id="usage"
-        className="scroll-mt-4 border-t border-neutral-800 px-6 py-10 lg:px-12"
+        className="scroll-mt-4 border-t border-neutral-200 px-6 py-10 lg:px-12 dark:border-neutral-800"
       >
         <SectionTitle hint="装包 → 引入 → 传 props">用法</SectionTitle>
         <div className="grid gap-4 lg:max-w-3xl">
@@ -70,7 +77,7 @@ function DemoDocs({ demo }: { demo: DemoMeta }) {
 
       <section
         id="source"
-        className="scroll-mt-4 border-t border-neutral-800 px-6 py-10 lg:px-12"
+        className="scroll-mt-4 border-t border-neutral-200 px-6 py-10 lg:px-12 dark:border-neutral-800"
       >
         <SectionTitle hint={`${demo.source.split("\n").length} 行 · 收录时原样保留`}>
           源码
@@ -95,7 +102,7 @@ function Standalone({ demo }: { demo: DemoMeta }) {
 
   const { Render } = demo;
   return (
-    <div className="min-h-screen bg-[#0B0B0F]">
+    <div className="min-h-screen bg-white dark:bg-[#0B0B0F]">
       <DemoHeader demo={demo} />
       <Render />
     </div>
@@ -123,7 +130,7 @@ function Shell() {
   const { Render } = demo;
 
   return (
-    <div className="min-h-screen bg-[#0B0B0F] text-neutral-200">
+    <div className="min-h-screen bg-white text-neutral-900 dark:bg-[#0B0B0F] dark:text-neutral-200">
       <Sidebar
         active={demo.id}
         onSelect={select}
@@ -133,7 +140,7 @@ function Shell() {
       {drawer && (
         <div className="fixed inset-0 z-40 lg:hidden">
           <div
-            className="absolute inset-0 bg-black/60 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
             onClick={() => setDrawer(false)}
           />
           <Sidebar
@@ -145,16 +152,20 @@ function Shell() {
       )}
 
       <div className="lg:pl-64">
-        <div className="sticky top-0 z-20 flex items-center gap-3 border-b border-neutral-800 bg-[#0B0B0F]/90 px-4 py-3 backdrop-blur lg:hidden">
+        <div className="sticky top-0 z-20 flex items-center gap-3 border-b border-neutral-200 bg-white/90 px-4 py-3 backdrop-blur lg:hidden dark:border-neutral-800 dark:bg-[#0B0B0F]/90">
           <button
             onClick={() => setDrawer(true)}
             aria-label="打开组件列表"
-            className="rounded-md border border-neutral-800 px-2.5 py-1.5 text-sm text-neutral-300"
+            className="rounded-md border border-neutral-200 px-2.5 py-1.5 text-sm text-neutral-700 dark:border-neutral-800 dark:text-neutral-300"
           >
             ☰
           </button>
-          <span className="text-sm font-medium text-neutral-100">{demo.title}</span>
-          <span className="ml-auto font-mono text-[11px] text-neutral-600">{demo.name}</span>
+          <span className="text-sm font-medium text-neutral-900 dark:text-neutral-100">
+            {demo.title}
+          </span>
+          <span className="ml-auto font-mono text-[11px] text-neutral-400 dark:text-neutral-600">
+            {demo.name}
+          </span>
         </div>
 
         <DemoHeader demo={demo} />
@@ -165,20 +176,20 @@ function Shell() {
 
         <DemoDocs demo={demo} />
 
-        <footer className="border-t border-neutral-800 px-6 py-8 text-xs text-neutral-600 lg:px-12">
+        <footer className="border-t border-neutral-200 px-6 py-8 text-xs text-neutral-500 lg:px-12 dark:border-neutral-800 dark:text-neutral-600">
           <p>
             演示站 · {DEMOS.length} 个组件 ·{" "}
             <a
               href={`${REPO_URL}#readme`}
               target="_blank"
               rel="noreferrer"
-              className="text-neutral-500 underline-offset-2 hover:text-neutral-300 hover:underline"
+              className="text-neutral-600 underline-offset-2 hover:underline dark:text-neutral-500 dark:hover:text-neutral-300"
             >
               Hyjkblj UI
             </a>
           </p>
           <p className="mt-1.5">
-            截图直达：<code className="font-mono text-neutral-500">?only={demo.id}</code>
+            截图直达：<code className="font-mono">?only={demo.id}</code>
           </p>
         </footer>
       </div>

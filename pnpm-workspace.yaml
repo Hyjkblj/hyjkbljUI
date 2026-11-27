@@ -3,6 +3,9 @@ packages:
   - "registry/*"
   - "playground"
 
+allowBuilds:
+  esbuild: set this to true or false
+
 # esbuild 用可选依赖拿平台二进制，不需要安装脚本
 ignoredBuiltDependencies:
   - esbuild

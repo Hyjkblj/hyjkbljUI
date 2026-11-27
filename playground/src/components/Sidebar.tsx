@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { DEMOS, PLANNED, REPO_URL } from "@/demos";
+import { AnimatedThemeToggler } from "@registry/animated-theme-toggler/animated-theme-toggler";
 
 type Props = {
   active: string;
@@ -11,23 +12,29 @@ export function Sidebar({ active, onSelect, className }: Props) {
   return (
     <aside
       className={cn(
-        "flex h-full w-64 shrink-0 flex-col border-r border-neutral-800 bg-[#0B0B0F]",
+        "flex h-full w-64 shrink-0 flex-col border-r border-neutral-200 bg-white dark:border-neutral-800 dark:bg-[#0B0B0F]",
         className,
       )}
     >
-      {/* 品牌 */}
+      {/* 品牌 + 主题切换 */}
       <div className="flex items-center gap-2.5 px-5 py-5">
         <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-sky-400 to-indigo-500 text-sm font-bold text-white">
           H
         </div>
-        <div className="leading-tight">
-          <div className="text-sm font-semibold text-neutral-100">Hyjkblj UI</div>
+        <div className="min-w-0 leading-tight">
+          <div className="truncate text-sm font-semibold text-neutral-900 dark:text-neutral-100">
+            Hyjkblj UI
+          </div>
           <div className="text-[11px] text-neutral-500">组件演示 · v0.1.0</div>
         </div>
+        <AnimatedThemeToggler
+          variant="circle"
+          className="ml-auto shrink-0 rounded-full p-1.5 text-neutral-500 transition-colors hover:bg-neutral-100 hover:text-neutral-800 dark:text-neutral-400 dark:hover:bg-white/[0.06] dark:hover:text-neutral-100"
+        />
       </div>
 
       <nav className="flex-1 overflow-y-auto px-3 pb-6">
-        <p className="px-2 pt-2 pb-1.5 text-[11px] font-medium tracking-wider text-neutral-600 uppercase">
+        <p className="px-2 pt-2 pb-1.5 text-[11px] font-medium tracking-wider text-neutral-500 uppercase dark:text-neutral-600">
           组件 · {DEMOS.length}
         </p>
 
@@ -41,21 +48,23 @@ export function Sidebar({ active, onSelect, className }: Props) {
                   className={cn(
                     "group flex w-full items-center gap-2.5 rounded-md py-2 pr-2 pl-2.5 text-left transition-colors",
                     isActive
-                      ? "bg-white/[0.07] text-neutral-50"
-                      : "text-neutral-400 hover:bg-white/[0.04] hover:text-neutral-200",
+                      ? "bg-neutral-100 text-neutral-900 dark:bg-white/[0.07] dark:text-neutral-50"
+                      : "text-neutral-600 hover:bg-neutral-100/70 hover:text-neutral-900 dark:text-neutral-400 dark:hover:bg-white/[0.04] dark:hover:text-neutral-200",
                   )}
                 >
                   <span
                     className={cn(
                       "w-5 shrink-0 font-mono text-[11px]",
-                      isActive ? "text-sky-400" : "text-neutral-600 group-hover:text-neutral-500",
+                      isActive
+                        ? "text-sky-600 dark:text-sky-400"
+                        : "text-neutral-400 group-hover:text-neutral-500 dark:text-neutral-600",
                     )}
                   >
                     {d.index}
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="block truncate text-[13px] font-medium">{d.title}</span>
-                    <span className="block truncate font-mono text-[10.5px] text-neutral-600">
+                    <span className="block truncate font-mono text-[10.5px] text-neutral-400 dark:text-neutral-600">
                       {d.name}
                     </span>
                   </span>
@@ -65,14 +74,14 @@ export function Sidebar({ active, onSelect, className }: Props) {
           })}
         </ul>
 
-        <p className="px-2 pt-6 pb-1.5 text-[11px] font-medium tracking-wider text-neutral-600 uppercase">
+        <p className="px-2 pt-6 pb-1.5 text-[11px] font-medium tracking-wider text-neutral-500 uppercase dark:text-neutral-600">
           自研层 · 规划中
         </p>
         <ul className="space-y-0.5">
           {PLANNED.map((name) => (
             <li
               key={name}
-              className="flex cursor-not-allowed items-center gap-2.5 rounded-md py-1.5 pr-2 pl-2.5 text-neutral-700"
+              className="flex cursor-not-allowed items-center gap-2.5 rounded-md py-1.5 pr-2 pl-2.5 text-neutral-400 dark:text-neutral-700"
               title="还没开始"
             >
               <span className="w-5 shrink-0 font-mono text-[11px]">··</span>
@@ -82,13 +91,12 @@ export function Sidebar({ active, onSelect, className }: Props) {
         </ul>
       </nav>
 
-      {/* 底部链接 */}
-      <div className="border-t border-neutral-800 px-3 py-3 text-[11.5px]">
+      <div className="border-t border-neutral-200 px-3 py-3 text-[11.5px] dark:border-neutral-800">
         <a
           href={`${REPO_URL}#readme`}
           target="_blank"
           rel="noreferrer"
-          className="block rounded px-2 py-1.5 text-neutral-500 hover:bg-white/[0.04] hover:text-neutral-200"
+          className="block rounded px-2 py-1.5 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-white/[0.04] dark:hover:text-neutral-200"
         >
           仓库 README
         </a>
@@ -96,7 +104,7 @@ export function Sidebar({ active, onSelect, className }: Props) {
           href={`${REPO_URL}/blob/main/docs/COMPONENTS.md`}
           target="_blank"
           rel="noreferrer"
-          className="block rounded px-2 py-1.5 text-neutral-500 hover:bg-white/[0.04] hover:text-neutral-200"
+          className="block rounded px-2 py-1.5 text-neutral-500 hover:bg-neutral-100 hover:text-neutral-800 dark:hover:bg-white/[0.04] dark:hover:text-neutral-200"
         >
           组件索引
         </a>

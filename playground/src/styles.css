@@ -14,9 +14,21 @@ body,
 
 body {
   margin: 0;
-  background: #0b0b0f;
-  color: #fafafa;
+  background: #ffffff;
+  color: #171717;
   font-family:
     ui-sans-serif, system-ui, -apple-system, "Segoe UI", "PingFang SC",
     "Microsoft YaHei", sans-serif;
+}
+
+html.dark body {
+  background: #0b0b0f;
+  color: #fafafa;
+}
+
+/* View Transitions：主题切换时不要给根元素加默认的淡入淡出 */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
 }

@@ -35,4 +35,5 @@ export default defineConfig([
   pkg("wobble-card", ["motion", "motion/react"]),
   pkg("typewriter-effect", ["motion", "motion/react"]),
   pkg("floating-dock", ["motion", "motion/react", "@tabler/icons-react"]),
+  pkg("animated-theme-toggler", ["lucide-react", "react-dom"]),
 ]);

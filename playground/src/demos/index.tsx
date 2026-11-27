@@ -4,12 +4,14 @@ import { CanvasTextDemo } from "./canvas-text";
 import { WobbleCardDemo } from "./wobble-card";
 import { TypewriterEffectDemo } from "./typewriter-effect";
 import { FloatingDockDemo } from "./floating-dock";
+import { AnimatedThemeTogglerDemo } from "./animated-theme-toggler";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
 import wobbleCardSource from "@registry/wobble-card/wobble-card.tsx?raw";
 import typewriterEffectSource from "@registry/typewriter-effect/typewriter-effect.tsx?raw";
 import floatingDockSource from "@registry/floating-dock/floating-dock.tsx?raw";
+import animatedThemeTogglerSource from "@registry/animated-theme-toggler/animated-theme-toggler.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -154,6 +156,29 @@ export function Nav() {
 }`,
     source: floatingDockSource,
     Render: FloatingDockDemo,
+  },
+  {
+    id: "animated-theme-toggler",
+    index: "06",
+    name: "animated-theme-toggler",
+    title: "动画主题切换",
+    summary: "点一下，配色从按钮中心以 clip-path 形变铺满整页。七种形状，走 View Transitions API。",
+    stack: "React · View Transitions",
+    deps: ["lucide-react"],
+    install: `pnpm add @hyjkblj/animated-theme-toggler lucide-react`,
+    usage: `import { AnimatedThemeToggler } from "@hyjkblj/animated-theme-toggler";
+
+export function Header() {
+  return (
+    <AnimatedThemeToggler
+      variant="star"        // circle | square | triangle | diamond | hexagon | rectangle | star
+      duration={400}
+      className="rounded-full border p-3"
+    />
+  );
+}`,
+    source: animatedThemeTogglerSource,
+    Render: AnimatedThemeTogglerDemo,
   },
 ];
 
