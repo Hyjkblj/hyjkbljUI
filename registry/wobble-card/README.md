@@ -9,7 +9,7 @@
 
 ![WobbleCard 两张卡片](../../docs/images/wobble-card.png)
 
-可交互 demo：`playground/src/App.tsx`，或 `?only=wobble-card`。
+可交互 demo：`pnpm dev` 后打开 `#/wobble-card`，鼠标移进卡片；截图模式 `?only=wobble-card`。
 
 > 静态图只能看到排版——位移是交互效果，把鼠标放上去才看得出来。
 

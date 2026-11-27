@@ -9,7 +9,7 @@
 
 ![TypewriterEffectSmooth 打出的一行字](../../docs/images/typewriter-effect.png)
 
-可交互 demo：`playground/src/App.tsx`，或 `?only=typewriter-effect`。
+可交互 demo：`pnpm dev` 后打开 `#/typewriter-effect`；截图模式 `?only=typewriter-effect`。
 
 ## 安装
 

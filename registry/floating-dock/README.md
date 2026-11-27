@@ -9,7 +9,7 @@ macOS 那种 Dock：一排圆形图标，鼠标横向扫过去时，离光标最
 
 ![FloatingDock 五个图标的一排](../../docs/images/floating-dock.png)
 
-可交互 demo：`playground/src/App.tsx`，或 `?only=floating-dock`。
+可交互 demo：`pnpm dev` 后打开 `#/floating-dock`，鼠标横向扫过图标；截图模式 `?only=floating-dock`。
 
 > 静态图只有静止状态——放大效果要鼠标扫过才看得到。
 

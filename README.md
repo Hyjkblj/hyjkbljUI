@@ -105,12 +105,20 @@ pnpm build:pkgs     # 构建全部组件包
 pnpm build          # 组件包 + 演示站
 ```
 
-演示站支持直达单个组件：
+演示站是「侧栏 + 主区」的文档站结构：左边选组件，右边看效果。
+
+![演示站](docs/images/shell-desktop.png)
+
+两种直达方式：
 
 ```text
-http://localhost:5173/?only=canvas-text
-http://localhost:5173/?only=floating-dock
+http://localhost:5173/#/canvas-text       # 侧栏 + 该组件
+http://localhost:5173/?only=canvas-text   # 只有该组件，无外壳（截图用）
 ```
+
+窄屏自动收成顶栏 + 抽屉：
+
+<img src="docs/images/shell-mobile.png" width="320" alt="移动端" />
 
 ## 目录结构
 

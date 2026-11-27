@@ -34,7 +34,7 @@
 | 文档 | [registry/macbook-scroll/README.md](../registry/macbook-scroll/README.md) |
 | 源码 | [macbook-scroll.tsx](../registry/macbook-scroll/macbook-scroll.tsx) |
 | 效果图 | [docs/images/macbook-scroll.png](images/macbook-scroll.png) |
-| 本地演示 | `pnpm dev` 后访问 `?only=macbook-scroll` |
+| 本地演示 | `pnpm dev` 后打开 `#/macbook-scroll`；截图用 `?only=macbook-scroll` |
 
 ---
 
@@ -53,7 +53,7 @@
 | 文档 | [registry/canvas-text/README.md](../registry/canvas-text/README.md) |
 | 源码 | [canvas-text.tsx](../registry/canvas-text/canvas-text.tsx) |
 | 效果图 | [docs/images/canvas-text.png](images/canvas-text.png) |
-| 本地演示 | `pnpm dev` 后访问 `?only=canvas-text` |
+| 本地演示 | `pnpm dev` 后打开 `#/canvas-text`；截图用 `?only=canvas-text` |
 
 ---
 
@@ -72,7 +72,7 @@
 | 文档 | [registry/wobble-card/README.md](../registry/wobble-card/README.md) |
 | 源码 | [wobble-card.tsx](../registry/wobble-card/wobble-card.tsx) |
 | 效果图 | [docs/images/wobble-card.png](images/wobble-card.png) |
-| 本地演示 | `pnpm dev` 后访问 `?only=wobble-card` |
+| 本地演示 | `pnpm dev` 后打开 `#/wobble-card`；截图用 `?only=wobble-card` |
 
 ---
 
@@ -91,7 +91,7 @@
 | 文档 | [registry/typewriter-effect/README.md](../registry/typewriter-effect/README.md) |
 | 源码 | [typewriter-effect.tsx](../registry/typewriter-effect/typewriter-effect.tsx) |
 | 效果图 | [docs/images/typewriter-effect.png](images/typewriter-effect.png) |
-| 本地演示 | `pnpm dev` 后访问 `?only=typewriter-effect` |
+| 本地演示 | `pnpm dev` 后打开 `#/typewriter-effect`；截图用 `?only=typewriter-effect` |
 
 ---
 
@@ -110,7 +110,7 @@ macOS 那种 Dock：鼠标横向扫过时，离光标最近的图标被弹簧放
 | 文档 | [registry/floating-dock/README.md](../registry/floating-dock/README.md) |
 | 源码 | [floating-dock.tsx](../registry/floating-dock/floating-dock.tsx) |
 | 效果图 | [docs/images/floating-dock.png](images/floating-dock.png) |
-| 本地演示 | `pnpm dev` 后访问 `?only=floating-dock` |
+| 本地演示 | `pnpm dev` 后打开 `#/floating-dock`；截图用 `?only=floating-dock` |
 
 ---
 

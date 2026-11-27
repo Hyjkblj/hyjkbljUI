@@ -9,7 +9,7 @@
 
 ![MacBook 开盖动效](../../docs/images/macbook-scroll.png)
 
-可交互 demo：`playground/src/App.tsx`。`pnpm dev` 后打开首页向下滚动；想看某个中间状态，用 `http://localhost:5173/?scroll=520` 直接跳到对应滚动位置。
+可交互 demo：`pnpm dev` 后打开 `#/macbook-scroll`，向下滚动。想看某个中间状态，用 `?scroll=520` 直接跳到对应滚动位置（截图模式 `?only=macbook-scroll`）。
 
 三个阶段：
 

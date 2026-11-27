@@ -9,7 +9,7 @@
 
 ![CanvasText: Ship landing pages at Lightning Speed](../../docs/images/canvas-text.png)
 
-可交互 demo：`playground/src/App.tsx`；只想看这一个，用 `?only=canvas-text`。
+可交互 demo：`pnpm dev` 后打开 `#/canvas-text`；只想看这一个（截图用），走 `?only=canvas-text`。
 
 原理三步（都在同一个 canvas 上，靠合成模式完成）：
 
