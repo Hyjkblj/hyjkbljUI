@@ -107,6 +107,19 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "扫光式骨架屏占位块。仅 React，零运行时依赖，需 Tailwind v4 主题变量。",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/skeleton/skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

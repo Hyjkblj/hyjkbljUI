@@ -16,6 +16,7 @@
 | 05 | FloatingDock 浮动 Dock | `@hyjkblj/floating-dock` | React | motion, @tabler/icons-react | experimental | [文档](../registry/floating-dock/README.md) |
 | 06 | AnimatedThemeToggler 动画主题切换 | `@hyjkblj/animated-theme-toggler` | React | lucide-react | experimental | [文档](../registry/animated-theme-toggler/README.md) |
 | 07 | TextAnimate 文字出场动画 | `@hyjkblj/text-animate` | React | motion | experimental | [文档](../registry/text-animate/README.md) |
+| 08 | Skeleton 骨架屏 | `@hyjkblj/skeleton` | React | 无 | experimental | [文档](../registry/skeleton/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -151,6 +152,25 @@ macOS 那种 Dock：鼠标横向扫过时，离光标最近的图标被弹簧放
 | 源码 | [text-animate.tsx](../registry/text-animate/text-animate.tsx) |
 | 效果图 | [docs/images/text-animate.png](images/text-animate.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/text-animate`；截图用 `?only=text-animate` |
+
+---
+
+## 08 · Skeleton 骨架屏
+
+[![Skeleton 效果图](images/skeleton.png)](../registry/skeleton/README.md)
+
+加载中的占位块：`--color-muted` 底色上一条高光从左往右扫。比 `animate-pulse` 更有方向感。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/skeleton` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | 无（需 Tailwind v4 的 `--color-muted` 与 `--animate-skeleton`） |
+| 安装 | `pnpm add @hyjkblj/skeleton` |
+| 文档 | [registry/skeleton/README.md](../registry/skeleton/README.md) |
+| 源码 | [skeleton.tsx](../registry/skeleton/skeleton.tsx) |
+| 效果图 | [docs/images/skeleton.png](images/skeleton.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/skeleton`；截图用 `?only=skeleton` |
 
 ---
 

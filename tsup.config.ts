@@ -37,4 +37,5 @@ export default defineConfig([
   pkg("floating-dock", ["motion", "motion/react", "@tabler/icons-react"]),
   pkg("animated-theme-toggler", ["lucide-react", "react-dom"]),
   pkg("text-animate", ["motion", "motion/react"]),
+  pkg("skeleton", []),
 ]);

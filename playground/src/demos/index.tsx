@@ -6,6 +6,7 @@ import { TypewriterEffectDemo } from "./typewriter-effect";
 import { FloatingDockDemo } from "./floating-dock";
 import { AnimatedThemeTogglerDemo } from "./animated-theme-toggler";
 import { TextAnimateDemo } from "./text-animate";
+import { SkeletonDemo } from "./skeleton";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -14,6 +15,7 @@ import typewriterEffectSource from "@registry/typewriter-effect/typewriter-effec
 import floatingDockSource from "@registry/floating-dock/floating-dock.tsx?raw";
 import animatedThemeTogglerSource from "@registry/animated-theme-toggler/animated-theme-toggler.tsx?raw";
 import textAnimateSource from "@registry/text-animate/text-animate.tsx?raw";
+import skeletonSource from "@registry/skeleton/skeleton.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -202,6 +204,31 @@ export function Hero() {
 }`,
     source: textAnimateSource,
     Render: TextAnimateDemo,
+  },
+  {
+    id: "skeleton",
+    index: "08",
+    name: "skeleton",
+    title: "骨架屏",
+    summary: "扫光式占位块，用渐变 + 位移动画模拟加载中。零运行时依赖。",
+    stack: "React · Tailwind",
+    deps: [],
+    install: `pnpm add @hyjkblj/skeleton`,
+    usage: `import { Skeleton } from "@hyjkblj/skeleton";
+
+export function CardSkeleton() {
+  return (
+    <div className="flex items-center gap-4">
+      <Skeleton className="size-10 rounded-full" />
+      <div className="flex flex-1 flex-col gap-2">
+        <Skeleton className="h-4 w-40" />
+        <Skeleton className="h-3 w-24" />
+      </div>
+    </div>
+  );
+}`,
+    source: skeletonSource,
+    Render: SkeletonDemo,
   },
 ];
 

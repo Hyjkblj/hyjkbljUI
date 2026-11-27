@@ -3,6 +3,22 @@
 /* 收录层源码在 playground 之外，Tailwind v4 需要显式声明扫描范围 */
 @source "../../registry";
 
+/* Coss skeleton 需要的主题变量与动画 */
+@theme {
+  --color-muted: #f4f4f5;
+  --animate-skeleton: skeleton 2s -1s infinite linear;
+}
+
+@keyframes skeleton {
+  to {
+    background-position: -200% 0;
+  }
+}
+
+html.dark {
+  --color-muted: #27272a;
+}
+
 /* 用 .dark 类控制暗色，避免依赖系统主题 */
 @custom-variant dark (&:where(.dark, .dark *));
 
