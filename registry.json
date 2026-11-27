@@ -188,6 +188,22 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "overflow-actions",
+      "type": "registry:ui",
+      "title": "OverflowActions",
+      "description": "连体胶囊工具条，主操作常驻、次级操作弹簧展开。仅 React，依赖 motion 与 lucide-react。",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/overflow-actions/overflow-actions.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

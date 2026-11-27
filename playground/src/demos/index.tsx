@@ -11,6 +11,7 @@ import { FloatingPanelDemo } from "./floating-panel";
 import { SelectDemo } from "./select";
 import { ExpandableActionBarDemo } from "./expandable-action-bar";
 import { MorphingSearchDemo } from "./morphing-search";
+import { OverflowActionsDemo } from "./overflow-actions";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -24,6 +25,7 @@ import floatingPanelSource from "@registry/floating-panel/floating-panel.tsx?raw
 import selectSource from "@registry/select/select.tsx?raw";
 import expandableActionBarSource from "@registry/expandable-action-bar/expandable-action-bar.tsx?raw";
 import morphingSearchSource from "@registry/morphing-search/morphing-search.tsx?raw";
+import overflowActionsSource from "@registry/overflow-actions/overflow-actions.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -356,6 +358,26 @@ const items: MorphingSearchItem[] = [
 <MorphingSearch items={items} iconOnly shortcut="" />;`,
     source: morphingSearchSource,
     Render: MorphingSearchDemo,
+  },
+  {
+    id: "overflow-actions",
+    index: "13",
+    name: "overflow-actions",
+    title: "溢出操作条",
+    summary: "主操作常驻的胶囊工具条，点「更多」用弹簧把次级操作展开出来，可选执行后自动收起。",
+    stack: "React · motion",
+    deps: ["motion", "lucide-react"],
+    install: `pnpm add @hyjkblj/overflow-actions motion lucide-react`,
+    usage: `import { OverflowActions, type OverflowActionItem } from "@hyjkblj/overflow-actions";
+
+<OverflowActions
+  primaryActions={[{ id: "preview", label: "预览", icon: <Eye /> }]}
+  overflowActions={[{ id: "branch", label: "分支", icon: <GitBranch /> }]}
+  collapseOnAction
+  onAction={(item) => console.log(item.id)}
+/>;`,
+    source: overflowActionsSource,
+    Render: OverflowActionsDemo,
   },
 ];
 

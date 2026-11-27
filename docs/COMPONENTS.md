@@ -21,6 +21,7 @@
 | 10 | Select 动画下拉选择 | `@hyjkblj/select` | React | motion, lucide-react | experimental | [文档](../registry/select/README.md) |
 | 11 | ExpandableActionBar 可展开工具条 | `@hyjkblj/expandable-action-bar` | React | motion, lucide-react | experimental | [文档](../registry/expandable-action-bar/README.md) |
 | 12 | MorphingSearch 形变搜索 | `@hyjkblj/morphing-search` | React | motion, lucide-react | experimental | [文档](../registry/morphing-search/README.md) |
+| 13 | OverflowActions 溢出操作条 | `@hyjkblj/overflow-actions` | React | motion, lucide-react | experimental | [文档](../registry/overflow-actions/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -251,6 +252,25 @@ macOS 那种 Dock：鼠标横向扫过时，离光标最近的图标被弹簧放
 | 源码 | [morphing-search.tsx](../registry/morphing-search/morphing-search.tsx) |
 | 效果图 | [docs/images/morphing-search.png](images/morphing-search.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/morphing-search`；截图用 `?only=morphing-search` |
+
+---
+
+## 13 · OverflowActions 溢出操作条
+
+[![OverflowActions 效果图](images/overflow-actions.png)](../registry/overflow-actions/README.md)
+
+主操作常驻的连体胶囊工具条，点「⋯」用弹簧把次级操作展开出来，可选执行后自动收起。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/overflow-actions` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion`、`lucide-react` |
+| 安装 | `pnpm add @hyjkblj/overflow-actions motion lucide-react` |
+| 文档 | [registry/overflow-actions/README.md](../registry/overflow-actions/README.md) |
+| 源码 | [overflow-actions.tsx](../registry/overflow-actions/overflow-actions.tsx) |
+| 效果图 | [docs/images/overflow-actions.png](images/overflow-actions.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/overflow-actions`；截图用 `?only=overflow-actions` |
 
 ---
 
