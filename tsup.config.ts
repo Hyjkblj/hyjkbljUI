@@ -8,9 +8,9 @@ const ALIAS = {
 
 const BASE_EXTERNAL = ["react", "react-dom", "react/jsx-runtime", "react/jsx-dev-runtime"];
 
-function pkg(name: string, extraExternal: string[]) {
+function pkg(name: string, extraExternal: string[], extraEntries: Record<string, string> = {}) {
   return {
-    entry: { [name]: `registry/${name}/${name}.tsx` },
+    entry: { [name]: `registry/${name}/${name}.tsx`, ...extraEntries },
     outDir: `registry/${name}/dist`,
     format: ["esm"] as const,
     dts: true,
@@ -39,4 +39,7 @@ export default defineConfig([
   pkg("text-animate", ["motion", "motion/react"]),
   pkg("skeleton", []),
   pkg("floating-panel", ["motion", "motion/react", "lucide-react"]),
+  pkg("select", ["motion", "motion/react", "lucide-react"], {
+    "select-morph": "registry/select/select-morph.tsx",
+  }),
 ]);

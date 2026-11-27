@@ -7,3 +7,5 @@ coverage/
 registry/*/dist/
 *.tgz
 .tmp-consumer/
+.tmp-consumer/
+.tmp-registry/

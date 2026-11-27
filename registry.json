@@ -136,6 +136,26 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "可组合的动画下拉选择，含 morph 变体与可选音效。仅 React，依赖 motion 与 lucide-react。",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/select/select.tsx",
+          "type": "registry:ui"
+        },
+        {
+          "path": "registry/select/select-morph.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

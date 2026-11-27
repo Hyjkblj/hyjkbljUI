@@ -8,6 +8,7 @@ import { AnimatedThemeTogglerDemo } from "./animated-theme-toggler";
 import { TextAnimateDemo } from "./text-animate";
 import { SkeletonDemo } from "./skeleton";
 import { FloatingPanelDemo } from "./floating-panel";
+import { SelectDemo } from "./select";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -18,6 +19,7 @@ import animatedThemeTogglerSource from "@registry/animated-theme-toggler/animate
 import textAnimateSource from "@registry/text-animate/text-animate.tsx?raw";
 import skeletonSource from "@registry/skeleton/skeleton.tsx?raw";
 import floatingPanelSource from "@registry/floating-panel/floating-panel.tsx?raw";
+import selectSource from "@registry/select/select.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -267,6 +269,40 @@ export function Actions() {
 }`,
     source: floatingPanelSource,
     Render: FloatingPanelDemo,
+  },
+  {
+    id: "select",
+    index: "10",
+    name: "select",
+    title: "动画下拉选择",
+    summary: "可组合的 select：面板从触发器弹出再分离；morph 变体则让触发器直接长成面板。含可关闭的音效。",
+    stack: "React · motion",
+    deps: ["motion", "lucide-react"],
+    install: `pnpm add @hyjkblj/select motion lucide-react`,
+    usage: `import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@hyjkblj/select";
+
+const [value, setValue] = useState("next");
+
+<Select value={value} onValueChange={setValue}>
+  <SelectTrigger>
+    <SelectValue placeholder="选一个框架" />
+  </SelectTrigger>
+  <SelectContent>
+    <SelectItem value="next">Next.js</SelectItem>
+    <SelectItem value="vite">Vite</SelectItem>
+  </SelectContent>
+</Select>
+
+// morph 变体
+import { MorphSelect, MorphSelectTrigger, MorphSelectValue, MorphSelectContent, MorphSelectItem } from "@hyjkblj/select/morph";`,
+    source: selectSource,
+    Render: SelectDemo,
   },
 ];
 

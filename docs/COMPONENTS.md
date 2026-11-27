@@ -18,6 +18,7 @@
 | 07 | TextAnimate 文字出场动画 | `@hyjkblj/text-animate` | React | motion | experimental | [文档](../registry/text-animate/README.md) |
 | 08 | Skeleton 骨架屏 | `@hyjkblj/skeleton` | React | 无 | experimental | [文档](../registry/skeleton/README.md) |
 | 09 | FloatingPanel 浮动面板 | `@hyjkblj/floating-panel` | React | motion, lucide-react | experimental | [文档](../registry/floating-panel/README.md) |
+| 10 | Select 动画下拉选择 | `@hyjkblj/select` | React | motion, lucide-react | experimental | [文档](../registry/select/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -191,6 +192,25 @@ macOS 那种 Dock：鼠标横向扫过时，离光标最近的图标被弹簧放
 | 源码 | [floating-panel.tsx](../registry/floating-panel/floating-panel.tsx) |
 | 效果图 | [docs/images/floating-panel.png](images/floating-panel.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/floating-panel`；截图用 `?only=floating-panel` |
+
+---
+
+## 10 · Select 动画下拉选择
+
+[![Select 效果图](images/select.png)](../registry/select/README.md)
+
+面板从触发器弹出再分离；morph 变体让触发器直接长成面板。17 个文件的可组合件，含可选音效引擎。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/select`（morph 走 `/morph` 子路径） |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion`、`lucide-react` |
+| 安装 | `pnpm add @hyjkblj/select motion lucide-react` |
+| 文档 | [registry/select/README.md](../registry/select/README.md) |
+| 源码 | [select.tsx](../registry/select/select.tsx) · [select-morph.tsx](../registry/select/select-morph.tsx) |
+| 效果图 | [docs/images/select.png](images/select.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/select`；截图用 `?only=select` |
 
 ---
 
