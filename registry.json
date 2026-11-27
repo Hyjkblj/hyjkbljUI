@@ -156,6 +156,22 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "expandable-action-bar",
+      "type": "registry:ui",
+      "title": "ExpandableActionBar",
+      "description": "紧凑图标工具条，hover / 聚焦展开成带文字的控件。仅 React，依赖 motion 与 lucide-react。",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/expandable-action-bar/expandable-action-bar.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

@@ -49,6 +49,7 @@
 | [Skeleton](registry/skeleton/README.md) | `@hyjkblj/skeleton` | 无 | 扫光式骨架屏 |
 | [FloatingPanel](registry/floating-panel/README.md) | `@hyjkblj/floating-panel` | motion, lucide-react | 从按钮位置展开的浮动面板 |
 | [Select](registry/select/README.md) | `@hyjkblj/select` | motion, lucide-react | 动画下拉选择 + morph 变体 |
+| [ExpandableActionBar](registry/expandable-action-bar/README.md) | `@hyjkblj/expandable-action-bar` | motion, lucide-react | 展开成带文字的图标工具条 |
 
 完整索引（效果图 + 源码链接 + 本地演示方式）：**[docs/COMPONENTS.md](docs/COMPONENTS.md)**
 

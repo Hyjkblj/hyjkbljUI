@@ -1,0 +1,40 @@
+{
+  "name": "@hyjkblj/expandable-action-bar",
+  "version": "0.1.0",
+  "description": "紧凑图标工具条，hover / 聚焦时展开成带文字的控件，共享 layout 滑动高亮。仅 React，依赖 motion 与 lucide-react。",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "expandable-action-bar.tsx",
+    "lib",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/expandable-action-bar.d.ts",
+      "import": "./dist/expandable-action-bar.js",
+      "default": "./dist/expandable-action-bar.js"
+    },
+    "./source": "./expandable-action-bar.tsx",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "pnpm -w run build:pkgs",
+    "prepublishOnly": "pnpm -w run build:pkgs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.7.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "motion": ">=11",
+    "lucide-react": ">=0.400"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

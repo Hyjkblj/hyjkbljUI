@@ -9,6 +9,7 @@ import { TextAnimateDemo } from "./text-animate";
 import { SkeletonDemo } from "./skeleton";
 import { FloatingPanelDemo } from "./floating-panel";
 import { SelectDemo } from "./select";
+import { ExpandableActionBarDemo } from "./expandable-action-bar";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -20,6 +21,7 @@ import textAnimateSource from "@registry/text-animate/text-animate.tsx?raw";
 import skeletonSource from "@registry/skeleton/skeleton.tsx?raw";
 import floatingPanelSource from "@registry/floating-panel/floating-panel.tsx?raw";
 import selectSource from "@registry/select/select.tsx?raw";
+import expandableActionBarSource from "@registry/expandable-action-bar/expandable-action-bar.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -303,6 +305,33 @@ const [value, setValue] = useState("next");
 import { MorphSelect, MorphSelectTrigger, MorphSelectValue, MorphSelectContent, MorphSelectItem } from "@hyjkblj/select/morph";`,
     source: selectSource,
     Render: SelectDemo,
+  },
+  {
+    id: "expandable-action-bar",
+    index: "11",
+    name: "expandable-action-bar",
+    title: "可展开工具条",
+    summary: "一排图标按钮，hover 或聚焦时展开成带文字与快捷键提示的控件，高亮块共享 layout 滑动。",
+    stack: "React · motion",
+    deps: ["motion", "lucide-react"],
+    install: `pnpm add @hyjkblj/expandable-action-bar motion lucide-react`,
+    usage: `import {
+  ExpandableActionBar,
+  type ExpandableActionBarItem,
+} from "@hyjkblj/expandable-action-bar";
+
+const items: ExpandableActionBarItem[] = [
+  { id: "send", label: "发送", icon: <Send className="h-4 w-4" />, shortcut: "S" },
+  { id: "copy", label: "复制", icon: <Copy className="h-4 w-4" /> },
+];
+
+<ExpandableActionBar
+  items={items}
+  activeId={activeId}
+  onAction={(item) => setActiveId(item.id)}
+/>;`,
+    source: expandableActionBarSource,
+    Render: ExpandableActionBarDemo,
   },
 ];
 

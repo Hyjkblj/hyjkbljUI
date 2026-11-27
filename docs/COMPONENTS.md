@@ -19,6 +19,7 @@
 | 08 | Skeleton 骨架屏 | `@hyjkblj/skeleton` | React | 无 | experimental | [文档](../registry/skeleton/README.md) |
 | 09 | FloatingPanel 浮动面板 | `@hyjkblj/floating-panel` | React | motion, lucide-react | experimental | [文档](../registry/floating-panel/README.md) |
 | 10 | Select 动画下拉选择 | `@hyjkblj/select` | React | motion, lucide-react | experimental | [文档](../registry/select/README.md) |
+| 11 | ExpandableActionBar 可展开工具条 | `@hyjkblj/expandable-action-bar` | React | motion, lucide-react | experimental | [文档](../registry/expandable-action-bar/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -211,6 +212,25 @@ macOS 那种 Dock：鼠标横向扫过时，离光标最近的图标被弹簧放
 | 源码 | [select.tsx](../registry/select/select.tsx) · [select-morph.tsx](../registry/select/select-morph.tsx) |
 | 效果图 | [docs/images/select.png](images/select.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/select`；截图用 `?only=select` |
+
+---
+
+## 11 · ExpandableActionBar 可展开工具条
+
+[![ExpandableActionBar 效果图](images/expandable-action-bar.png)](../registry/expandable-action-bar/README.md)
+
+一排图标，hover 或聚焦展开成带文字与快捷键提示的控件，高亮块共享 layout 滑动。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/expandable-action-bar` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion`、`lucide-react` |
+| 安装 | `pnpm add @hyjkblj/expandable-action-bar motion lucide-react` |
+| 文档 | [registry/expandable-action-bar/README.md](../registry/expandable-action-bar/README.md) |
+| 源码 | [expandable-action-bar.tsx](../registry/expandable-action-bar/expandable-action-bar.tsx) |
+| 效果图 | [docs/images/expandable-action-bar.png](images/expandable-action-bar.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/expandable-action-bar`；截图用 `?only=expandable-action-bar` |
 
 ---
 
