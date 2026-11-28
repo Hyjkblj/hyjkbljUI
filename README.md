@@ -58,6 +58,7 @@
 | [AppleProDisplayXDR](registry/apple-pro-display-xdr/README.md) | `@hyjkblj/apple-pro-display-xdr` | motion, tabler | CSS/SVG 复刻的苹果显示器 |
 | [ImagesBadge](registry/images-badge/README.md) | `@hyjkblj/images-badge` | motion | 带图片堆的胶囊徽章 |
 | [MagneticButton](registry/button-magnetic/README.md) | `@hyjkblj/button-magnetic` | motion, lucide-react | 朝光标吸附的按钮 |
+| [StatefulButton](registry/button-stateful/README.md) | `@hyjkblj/button-stateful` | motion, lucide-react | 四态切换的状态按钮 |
 
 完整索引（效果图 + 源码链接 + 本地演示方式）：**[docs/COMPONENTS.md](docs/COMPONENTS.md)**
 

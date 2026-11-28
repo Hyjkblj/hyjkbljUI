@@ -18,6 +18,7 @@ import { MergingBubblesDemo } from "./merging-bubbles";
 import { AppleProDisplayXDRDemo } from "./apple-pro-display-xdr";
 import { ImagesBadgeDemo } from "./images-badge";
 import { ButtonMagneticDemo } from "./button-magnetic";
+import { ButtonStatefulDemo } from "./button-stateful";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -38,6 +39,7 @@ import mergingBubblesSource from "@registry/merging-bubbles/merging-bubbles.tsx?
 import appleProDisplaySource from "@registry/apple-pro-display-xdr/apple-pro-display-xdr.tsx?raw";
 import imagesBadgeSource from "@registry/images-badge/images-badge.tsx?raw";
 import buttonMagneticSource from "@registry/button-magnetic/button/magnetic.tsx?raw";
+import buttonStatefulSource from "@registry/button-stateful/button/stateful.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -503,6 +505,31 @@ const items: MorphingSearchItem[] = [
 </MagneticButton>;`,
     source: buttonMagneticSource,
     Render: ButtonMagneticDemo,
+  },
+  {
+    id: "button-stateful",
+    index: "20",
+    name: "button-stateful",
+    title: "状态按钮",
+    summary: "idle / loading / success / error 四态切换，文字模糊淡入、宽度自适应。",
+    stack: "React · motion",
+    deps: ["motion", "lucide-react"],
+    install: `pnpm add @hyjkblj/button-stateful motion lucide-react`,
+    usage: `import { StatefulButton, type ButtonState } from "@hyjkblj/button-stateful";
+
+const [state, setState] = useState<ButtonState>("idle");
+
+<StatefulButton
+  state={state}
+  onClick={() => setState("loading")}
+  loadingText="保存中"
+  successText="已保存"
+  errorText="失败"
+>
+  保存更改
+</StatefulButton>;`,
+    source: buttonStatefulSource,
+    Render: ButtonStatefulDemo,
   },
 ];
 

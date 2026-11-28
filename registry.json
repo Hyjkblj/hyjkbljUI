@@ -293,6 +293,22 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "button-stateful",
+      "type": "registry:ui",
+      "title": "StatefulButton",
+      "description": "四态按钮：idle / loading / success / error，文字模糊切换、宽度自适应。仅 React。",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/button-stateful/button/stateful.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
