@@ -48,6 +48,9 @@ export default defineConfig([
   pkg("apple-pro-display-xdr", []),
   pkg("images-badge", ["motion", "motion/react"]),
   pkg("loader", ["motion", "motion/react"]),
+  pkg("multi-select", ["motion", "motion/react", "lucide-react"], {
+    "multi-select": "registry/multi-select/multi-select/index.tsx",
+  }),
   pkg("button-base", ["motion", "motion/react", "lucide-react"], {
     "button-base": "registry/button-base/button/base.tsx",
   }),

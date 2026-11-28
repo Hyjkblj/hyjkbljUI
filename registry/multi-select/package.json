@@ -1,0 +1,42 @@
+{
+  "name": "@hyjkblj/multi-select",
+  "version": "0.1.0",
+  "description": "可搜索的多选：选中项变成可删除的 token，面板弹簧展开并避让碰撞。仅 React，依赖 motion 与 lucide-react。",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "multi-select",
+    "combobox",
+    "lib",
+    "popover-position.ts",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/multi-select.d.ts",
+      "import": "./dist/multi-select.js",
+      "default": "./dist/multi-select.js"
+    },
+    "./source": "./multi-select/index.tsx",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "pnpm -w run build:pkgs",
+    "prepublishOnly": "pnpm -w run build:pkgs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.7.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "motion": ">=11",
+    "lucide-react": ">=0.400"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

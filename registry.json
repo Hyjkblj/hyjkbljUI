@@ -340,6 +340,22 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "multi-select",
+      "type": "registry:ui",
+      "title": "MultiSelect",
+      "description": "可搜索多选：token 化已选、portal 面板碰撞避让、子序列匹配。仅 React。",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/multi-select/multi-select/index.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

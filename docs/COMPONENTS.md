@@ -31,6 +31,7 @@
 | 20 | StatefulButton 状态按钮 | `@hyjkblj/button-stateful` | React | motion, lucide-react | experimental | [文档](../registry/button-stateful/README.md) |
 | 21 | Button 基础按钮 | `@hyjkblj/button-base` | React | motion, lucide-react | experimental | [文档](../registry/button-base/README.md) |
 | 22 | Loader 加载指示器 | `@hyjkblj/loader` | React | motion | experimental | [文档](../registry/loader/README.md) |
+| 23 | MultiSelect 多选下拉 | `@hyjkblj/multi-select` | React | motion, lucide-react | experimental | [文档](../registry/multi-select/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -451,6 +452,25 @@ idle / loading / success / error 四态切换，文字模糊淡入、宽度自�
 | 源码 | [loader.tsx](../registry/loader/loader.tsx) |
 | 效果图 | [docs/images/loader.png](images/loader.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/loader`；截图用 `?only=loader` |
+
+---
+
+## 23 · MultiSelect 多选下拉
+
+[![MultiSelect 效果图](images/multi-select.png)](../registry/multi-select/README.md)
+
+可搜索多选：选中项变成带 × 的 token，portal 面板弹簧展开并避让碰撞，支持分组与子序列匹配。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/multi-select` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion`、`lucide-react`（需 shadcn 语义色） |
+| 安装 | `pnpm add @hyjkblj/multi-select motion lucide-react` |
+| 文档 | [registry/multi-select/README.md](../registry/multi-select/README.md) |
+| 源码 | [multi-select/index.tsx](../registry/multi-select/multi-select/index.tsx) |
+| 效果图 | [docs/images/multi-select.png](images/multi-select.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/multi-select`；截图用 `?only=multi-select` |
 
 ---
 

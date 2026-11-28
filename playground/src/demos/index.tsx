@@ -21,6 +21,7 @@ import { ButtonMagneticDemo } from "./button-magnetic";
 import { ButtonStatefulDemo } from "./button-stateful";
 import { ButtonBaseDemo } from "./button-base";
 import { LoaderDemo } from "./loader";
+import { MultiSelectDemo } from "./multi-select";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -44,6 +45,7 @@ import buttonMagneticSource from "@registry/button-magnetic/button/magnetic.tsx?
 import buttonStatefulSource from "@registry/button-stateful/button/stateful.tsx?raw";
 import buttonBaseSource from "@registry/button-base/button/base.tsx?raw";
 import loaderSource from "@registry/loader/loader.tsx?raw";
+import multiSelectSource from "@registry/multi-select/multi-select/index.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -569,6 +571,34 @@ const [state, setState] = useState<ButtonState>("idle");
 <Loader variant="metaballs" size={48} speed={1.2} />;`,
     source: loaderSource,
     Render: LoaderDemo,
+  },
+  {
+    id: "multi-select",
+    index: "23",
+    name: "multi-select",
+    title: "多选下拉",
+    summary: "可搜索多选：选中项变 token，面板弹簧展开并避让碰撞，支持分组与子序列匹配。",
+    stack: "React · motion",
+    deps: ["motion", "lucide-react"],
+    install: `pnpm add @hyjkblj/multi-select motion lucide-react`,
+    usage: `import {
+  MultiSelect, MultiSelectTrigger, MultiSelectValue, MultiSelectInput,
+  MultiSelectContent, MultiSelectList, MultiSelectItem,
+} from "@hyjkblj/multi-select";
+
+<MultiSelect defaultValue={["design"]} onValueChange={setValues}>
+  <MultiSelectTrigger>
+    <MultiSelectValue placeholder="选择团队" />
+    <MultiSelectInput aria-label="搜索" />
+  </MultiSelectTrigger>
+  <MultiSelectContent>
+    <MultiSelectList ariaLabel="团队">
+      <MultiSelectItem value="design" textValue="Design">Design</MultiSelectItem>
+    </MultiSelectList>
+  </MultiSelectContent>
+</MultiSelect>;`,
+    source: multiSelectSource,
+    Render: MultiSelectDemo,
   },
 ];
 
