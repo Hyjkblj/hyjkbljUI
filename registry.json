@@ -309,6 +309,22 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "button-base",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "基础按钮：弹簧按压、可选水波与音效、四种变体，附 ButtonLink。仅 React。",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/button-base/button/base.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

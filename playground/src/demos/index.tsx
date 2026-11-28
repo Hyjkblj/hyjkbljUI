@@ -19,6 +19,7 @@ import { AppleProDisplayXDRDemo } from "./apple-pro-display-xdr";
 import { ImagesBadgeDemo } from "./images-badge";
 import { ButtonMagneticDemo } from "./button-magnetic";
 import { ButtonStatefulDemo } from "./button-stateful";
+import { ButtonBaseDemo } from "./button-base";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -40,6 +41,7 @@ import appleProDisplaySource from "@registry/apple-pro-display-xdr/apple-pro-dis
 import imagesBadgeSource from "@registry/images-badge/images-badge.tsx?raw";
 import buttonMagneticSource from "@registry/button-magnetic/button/magnetic.tsx?raw";
 import buttonStatefulSource from "@registry/button-stateful/button/stateful.tsx?raw";
+import buttonBaseSource from "@registry/button-base/button/base.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -530,6 +532,25 @@ const [state, setState] = useState<ButtonState>("idle");
 </StatefulButton>;`,
     source: buttonStatefulSource,
     Render: ButtonStatefulDemo,
+  },
+  {
+    id: "button-base",
+    index: "21",
+    name: "button-base",
+    title: "基础按钮",
+    summary: "弹簧按压、可选水波与音效、四种变体与尺寸，另附 ButtonLink。",
+    stack: "React · motion",
+    deps: ["motion", "lucide-react"],
+    install: `pnpm add @hyjkblj/button-base motion lucide-react`,
+    usage: `import { Button, ButtonLink } from "@hyjkblj/button-base";
+
+<Button variant="primary" size="md" ripple>
+  继续 <ArrowRight className="h-4 w-4" />
+</Button>
+
+<ButtonLink href="/docs" variant="outline">链接按钮</ButtonLink>;`,
+    source: buttonBaseSource,
+    Render: ButtonBaseDemo,
   },
 ];
 

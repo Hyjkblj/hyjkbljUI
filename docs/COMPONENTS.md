@@ -29,6 +29,7 @@
 | 18 | ImagesBadge 图片堆徽章 | `@hyjkblj/images-badge` | React | motion | experimental | [文档](../registry/images-badge/README.md) |
 | 19 | MagneticButton 磁吸按钮 | `@hyjkblj/button-magnetic` | React | motion, lucide-react | experimental | [文档](../registry/button-magnetic/README.md) |
 | 20 | StatefulButton 状态按钮 | `@hyjkblj/button-stateful` | React | motion, lucide-react | experimental | [文档](../registry/button-stateful/README.md) |
+| 21 | Button 基础按钮 | `@hyjkblj/button-base` | React | motion, lucide-react | experimental | [文档](../registry/button-base/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -411,6 +412,25 @@ idle / loading / success / error 四态切换，文字模糊淡入、宽度自�
 | 源码 | [button/stateful.tsx](../registry/button-stateful/button/stateful.tsx) |
 | 效果图 | [docs/images/button-stateful.png](images/button-stateful.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/button-stateful`；截图用 `?only=button-stateful` |
+
+---
+
+## 21 · Button 基础按钮
+
+[![Button 效果图](images/button-base.png)](../registry/button-base/README.md)
+
+弹簧按压、可选水波与音效、四种变体与尺寸，另附渲染成 `<a>` 的 ButtonLink。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/button-base` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion`、`lucide-react`（需 shadcn 语义色） |
+| 安装 | `pnpm add @hyjkblj/button-base motion lucide-react` |
+| 文档 | [registry/button-base/README.md](../registry/button-base/README.md) |
+| 源码 | [button/base.tsx](../registry/button-base/button/base.tsx) |
+| 效果图 | [docs/images/button-base.png](images/button-base.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/button-base`；截图用 `?only=button-base` |
 
 ---
 

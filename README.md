@@ -59,6 +59,7 @@
 | [ImagesBadge](registry/images-badge/README.md) | `@hyjkblj/images-badge` | motion | 带图片堆的胶囊徽章 |
 | [MagneticButton](registry/button-magnetic/README.md) | `@hyjkblj/button-magnetic` | motion, lucide-react | 朝光标吸附的按钮 |
 | [StatefulButton](registry/button-stateful/README.md) | `@hyjkblj/button-stateful` | motion, lucide-react | 四态切换的状态按钮 |
+| [Button](registry/button-base/README.md) | `@hyjkblj/button-base` | motion, lucide-react | 基础按钮 + ButtonLink |
 
 完整索引（效果图 + 源码链接 + 本地演示方式）：**[docs/COMPONENTS.md](docs/COMPONENTS.md)**
 

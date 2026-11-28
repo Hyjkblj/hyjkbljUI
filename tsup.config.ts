@@ -47,6 +47,9 @@ export default defineConfig([
   pkg("merging-bubbles", []),
   pkg("apple-pro-display-xdr", []),
   pkg("images-badge", ["motion", "motion/react"]),
+  pkg("button-base", ["motion", "motion/react", "lucide-react"], {
+    "button-base": "registry/button-base/button/base.tsx",
+  }),
   pkg("button-stateful", ["motion", "motion/react", "lucide-react"], {
     "button-stateful": "registry/button-stateful/button/stateful.tsx",
   }),
