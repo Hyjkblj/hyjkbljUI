@@ -46,6 +46,7 @@ export default defineConfig([
   pkg("liquid-glass", []),
   pkg("merging-bubbles", []),
   pkg("apple-pro-display-xdr", []),
+  pkg("images-badge", ["motion", "motion/react"]),
   pkg("select", ["motion", "motion/react", "lucide-react"], {
     "select-morph": "registry/select/select-morph.tsx",
   }),

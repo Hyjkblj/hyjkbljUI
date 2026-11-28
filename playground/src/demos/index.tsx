@@ -16,6 +16,7 @@ import { HeroVideoDialogDemo } from "./hero-video-dialog";
 import { LiquidGlassDemo } from "./liquid-glass";
 import { MergingBubblesDemo } from "./merging-bubbles";
 import { AppleProDisplayXDRDemo } from "./apple-pro-display-xdr";
+import { ImagesBadgeDemo } from "./images-badge";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -34,6 +35,7 @@ import heroVideoDialogSource from "@registry/hero-video-dialog/hero-video-dialog
 import liquidGlassSource from "@registry/liquid-glass/liquid-glass.tsx?raw";
 import mergingBubblesSource from "@registry/merging-bubbles/merging-bubbles.tsx?raw";
 import appleProDisplaySource from "@registry/apple-pro-display-xdr/apple-pro-display-xdr.tsx?raw";
+import imagesBadgeSource from "@registry/images-badge/images-badge.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -463,6 +465,25 @@ const items: MorphingSearchItem[] = [
 <AppleProDisplayXDR screenContent={<img src="/my-shot.png" alt="" className="size-full object-cover" />} />;`,
     source: appleProDisplaySource,
     Render: AppleProDisplayXDRDemo,
+  },
+  {
+    id: "images-badge",
+    index: "18",
+    name: "images-badge",
+    title: "图片堆徽章",
+    summary: "胶囊徽章里塞一叠缩略图，hover 展开成扇形。可配 href 变成链接。",
+    stack: "React · motion",
+    deps: ["motion"],
+    install: `pnpm add @hyjkblj/images-badge motion`,
+    usage: `import { ImagesBadge } from "@hyjkblj/images-badge";
+
+<ImagesBadge
+  text="Introducing Agenforce Marketing Template"
+  images={["/a.webp", "/b.webp", "/c.webp"]}
+  href="/templates"
+/>;`,
+    source: imagesBadgeSource,
+    Render: ImagesBadgeDemo,
   },
 ];
 

@@ -26,6 +26,7 @@
 | 15 | LiquidGlass 液态玻璃 | `@hyjkblj/liquid-glass` | React | 无 | experimental | [文档](../registry/liquid-glass/README.md) |
 | 16 | MergingBubbles 融合气泡 | `@hyjkblj/merging-bubbles` | React | 无 | experimental | [文档](../registry/merging-bubbles/README.md) |
 | 17 | AppleProDisplayXDR 显示器 | `@hyjkblj/apple-pro-display-xdr` | React | motion, @tabler/icons-react | experimental | [文档](../registry/apple-pro-display-xdr/README.md) |
+| 18 | ImagesBadge 图片堆徽章 | `@hyjkblj/images-badge` | React | motion | experimental | [文档](../registry/images-badge/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -351,6 +352,25 @@ SVG 位移滤镜做成的玻璃：折射背后内容，边缘带色散。仅 Chr
 | 源码 | [apple-pro-display-xdr.tsx](../registry/apple-pro-display-xdr/apple-pro-display-xdr.tsx) |
 | 效果图 | [docs/images/apple-pro-display-xdr.png](images/apple-pro-display-xdr.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/apple-pro-display-xdr`；截图用 `?only=apple-pro-display-xdr` |
+
+---
+
+## 18 · ImagesBadge 图片堆徽章
+
+[![ImagesBadge 效果图](images/images-badge.png)](../registry/images-badge/README.md)
+
+胶囊徽章里叠一摞缩略图，hover 展开成扇形、胶囊变宽。可传 href 变成链接。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/images-badge` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion` |
+| 安装 | `pnpm add @hyjkblj/images-badge motion` |
+| 文档 | [registry/images-badge/README.md](../registry/images-badge/README.md) |
+| 源码 | [images-badge.tsx](../registry/images-badge/images-badge.tsx) |
+| 效果图 | [docs/images/images-badge.png](images/images-badge.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/images-badge`；截图用 `?only=images-badge` |
 
 ---
 

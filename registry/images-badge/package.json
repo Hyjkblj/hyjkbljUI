@@ -1,0 +1,38 @@
+{
+  "name": "@hyjkblj/images-badge",
+  "version": "0.1.0",
+  "description": "带折叠图片堆的胶囊徽章，hover 展开成图片扇形。仅 React，依赖 motion。",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "images-badge.tsx",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/images-badge.d.ts",
+      "import": "./dist/images-badge.js",
+      "default": "./dist/images-badge.js"
+    },
+    "./source": "./images-badge.tsx",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "pnpm -w run build:pkgs",
+    "prepublishOnly": "pnpm -w run build:pkgs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.7.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "motion": ">=11"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

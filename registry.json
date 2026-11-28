@@ -262,6 +262,21 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "images-badge",
+      "type": "registry:ui",
+      "title": "ImagesBadge",
+      "description": "带折叠图片堆的胶囊徽章，hover 展开成扇形。仅 React，依赖 motion。",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/images-badge/images-badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
