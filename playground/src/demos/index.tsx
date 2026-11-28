@@ -20,6 +20,7 @@ import { ImagesBadgeDemo } from "./images-badge";
 import { ButtonMagneticDemo } from "./button-magnetic";
 import { ButtonStatefulDemo } from "./button-stateful";
 import { ButtonBaseDemo } from "./button-base";
+import { LoaderDemo } from "./loader";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -42,6 +43,7 @@ import imagesBadgeSource from "@registry/images-badge/images-badge.tsx?raw";
 import buttonMagneticSource from "@registry/button-magnetic/button/magnetic.tsx?raw";
 import buttonStatefulSource from "@registry/button-stateful/button/stateful.tsx?raw";
 import buttonBaseSource from "@registry/button-base/button/base.tsx?raw";
+import loaderSource from "@registry/loader/loader.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -551,6 +553,22 @@ const [state, setState] = useState<ButtonState>("idle");
 <ButtonLink href="/docs" variant="outline">链接按钮</ButtonLink>;`,
     source: buttonBaseSource,
     Render: ButtonBaseDemo,
+  },
+  {
+    id: "loader",
+    index: "22",
+    name: "loader",
+    title: "加载指示器",
+    summary: "17 种变体：spinner / dots / bars / 点阵 / dither / metaballs / comet / helix / percent / 5 种 ASCII。",
+    stack: "React · motion",
+    deps: ["motion"],
+    install: `pnpm add @hyjkblj/loader motion`,
+    usage: `import { Loader } from "@hyjkblj/loader";
+
+<Loader variant="spinner" size={32} label="正在加载" />;
+<Loader variant="metaballs" size={48} speed={1.2} />;`,
+    source: loaderSource,
+    Render: LoaderDemo,
   },
 ];
 

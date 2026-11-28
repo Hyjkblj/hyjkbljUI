@@ -325,6 +325,21 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "loader",
+      "type": "registry:ui",
+      "title": "Loader",
+      "description": "17 种变体的加载指示器，currentColor 上色，reduced-motion 降级为脉冲。仅 React，依赖 motion。",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/loader/loader.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

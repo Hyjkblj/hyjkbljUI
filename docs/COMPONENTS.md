@@ -30,6 +30,7 @@
 | 19 | MagneticButton 磁吸按钮 | `@hyjkblj/button-magnetic` | React | motion, lucide-react | experimental | [文档](../registry/button-magnetic/README.md) |
 | 20 | StatefulButton 状态按钮 | `@hyjkblj/button-stateful` | React | motion, lucide-react | experimental | [文档](../registry/button-stateful/README.md) |
 | 21 | Button 基础按钮 | `@hyjkblj/button-base` | React | motion, lucide-react | experimental | [文档](../registry/button-base/README.md) |
+| 22 | Loader 加载指示器 | `@hyjkblj/loader` | React | motion | experimental | [文档](../registry/loader/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -431,6 +432,25 @@ idle / loading / success / error 四态切换，文字模糊淡入、宽度自�
 | 源码 | [button/base.tsx](../registry/button-base/button/base.tsx) |
 | 效果图 | [docs/images/button-base.png](images/button-base.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/button-base`；截图用 `?only=button-base` |
+
+---
+
+## 22 · Loader 加载指示器
+
+[![Loader 效果图](images/loader.png)](../registry/loader/README.md)
+
+17 种加载动画：spinner / dots / bars / 点阵 / dither / morph / comet / metaballs / newton / helix / scramble / percent / 5 种 ASCII。currentColor 上色。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/loader` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion` |
+| 安装 | `pnpm add @hyjkblj/loader motion` |
+| 文档 | [registry/loader/README.md](../registry/loader/README.md) |
+| 源码 | [loader.tsx](../registry/loader/loader.tsx) |
+| 效果图 | [docs/images/loader.png](images/loader.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/loader`；截图用 `?only=loader` |
 
 ---
 
