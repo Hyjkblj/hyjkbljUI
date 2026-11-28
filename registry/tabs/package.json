@@ -1,0 +1,40 @@
+{
+  "name": "@hyjkblj/tabs",
+  "version": "0.1.0",
+  "description": "弹簧指示器的标签页：pill / segment / underline 三种样式，可选图标，长列表横向滚动。仅 React。",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "tabs.tsx",
+    "lib",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/tabs.d.ts",
+      "import": "./dist/tabs.js",
+      "default": "./dist/tabs.js"
+    },
+    "./source": "./tabs.tsx",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "pnpm -w run build:pkgs",
+    "prepublishOnly": "pnpm -w run build:pkgs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.7.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "motion": ">=11",
+    "lucide-react": ">=0.400"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

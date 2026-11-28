@@ -24,6 +24,7 @@ import { LoaderDemo } from "./loader";
 import { MultiSelectDemo } from "./multi-select";
 import { SharedLayoutBgDemo } from "./shared-layout-bg";
 import { SortableStackDemo } from "./sortable-stack";
+import { TabsDemo } from "./tabs";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -50,6 +51,7 @@ import loaderSource from "@registry/loader/loader.tsx?raw";
 import multiSelectSource from "@registry/multi-select/multi-select/index.tsx?raw";
 import sharedLayoutBgSource from "@registry/shared-layout-bg/shared-layout-bg.tsx?raw";
 import sortableListSource from "@registry/sortable-stack/sortable-list.tsx?raw";
+import tabsSource from "@registry/tabs/tabs.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -653,6 +655,28 @@ const [state, setState] = useState<ButtonState>("idle");
 </SortableList>;`,
     source: sortableListSource,
     Render: SortableStackDemo,
+  },
+  {
+    id: "tabs",
+    index: "26",
+    name: "tabs",
+    title: "标签页",
+    summary: "弹簧指示器的标签页：pill / segment / underline，可选图标，长列表横向滚动。",
+    stack: "React · motion",
+    deps: ["motion", "lucide-react"],
+    install: `pnpm add @hyjkblj/tabs motion lucide-react`,
+    usage: `import { Tabs, TabsList, TabsTrigger, TabsContent } from "@hyjkblj/tabs";
+
+<Tabs defaultValue="overview" variant="pill">
+  <TabsList>
+    <TabsTrigger value="overview">概览</TabsTrigger>
+    <TabsTrigger value="activity">动态</TabsTrigger>
+  </TabsList>
+  <TabsContent value="overview">高层汇总。</TabsContent>
+  <TabsContent value="activity">最近发生的事。</TabsContent>
+</Tabs>;`,
+    source: tabsSource,
+    Render: TabsDemo,
   },
 ];
 

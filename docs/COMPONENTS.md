@@ -34,6 +34,7 @@
 | 23 | MultiSelect 多选下拉 | `@hyjkblj/multi-select` | React | motion, lucide-react | experimental | [文档](../registry/multi-select/README.md) |
 | 24 | SharedLayoutBg 共享布局高亮 | `@hyjkblj/shared-layout-bg` | React | motion | experimental | [文档](../registry/shared-layout-bg/README.md) |
 | 25 | SortableList 拖拽排序列表 | `@hyjkblj/sortable-stack` | React | motion, lucide-react | experimental | [文档](../registry/sortable-stack/README.md) |
+| 26 | Tabs 标签页 | `@hyjkblj/tabs` | React | motion, lucide-react | experimental | [文档](../registry/tabs/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -511,6 +512,25 @@ idle / loading / success / error 四态切换，文字模糊淡入、宽度自�
 | 源码 | [sortable-list.tsx](../registry/sortable-stack/sortable-list.tsx) |
 | 效果图 | [docs/images/sortable-stack.png](images/sortable-stack.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/sortable-stack`；截图用 `?only=sortable-stack` |
+
+---
+
+## 26 · Tabs 标签页
+
+[![Tabs 效果图](images/tabs.png)](../registry/tabs/README.md)
+
+弹簧指示器在标签间滑动；pill / segment / underline 三种样式，支持图标与横向溢出滚动。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/tabs` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion`、`lucide-react`（需 shadcn 语义色） |
+| 安装 | `pnpm add @hyjkblj/tabs motion lucide-react` |
+| 文档 | [registry/tabs/README.md](../registry/tabs/README.md) |
+| 源码 | [tabs.tsx](../registry/tabs/tabs.tsx) |
+| 效果图 | [docs/images/tabs.png](images/tabs.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/tabs`；截图用 `?only=tabs` |
 
 ---
 

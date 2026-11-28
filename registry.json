@@ -387,6 +387,22 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "弹簧指示器标签页：pill / segment / underline，支持图标与溢出滚动。仅 React。",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/tabs/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
