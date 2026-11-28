@@ -35,6 +35,7 @@
 | 24 | SharedLayoutBg 共享布局高亮 | `@hyjkblj/shared-layout-bg` | React | motion | experimental | [文档](../registry/shared-layout-bg/README.md) |
 | 25 | SortableList 拖拽排序列表 | `@hyjkblj/sortable-stack` | React | motion, lucide-react | experimental | [文档](../registry/sortable-stack/README.md) |
 | 26 | Tabs 标签页 | `@hyjkblj/tabs` | React | motion, lucide-react | experimental | [文档](../registry/tabs/README.md) |
+| 27 | WaveReveal 波纹转场 | `@hyjkblj/wave-reveal` | React | motion | experimental | [文档](../registry/wave-reveal/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -531,6 +532,25 @@ idle / loading / success / error 四态切换，文字模糊淡入、宽度自�
 | 源码 | [tabs.tsx](../registry/tabs/tabs.tsx) |
 | 效果图 | [docs/images/tabs.png](images/tabs.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/tabs`；截图用 `?only=tabs` |
+
+---
+
+## 27 · WaveReveal 波纹转场
+
+[![WaveReveal 效果图](images/wave-reveal.png)](../registry/wave-reveal/README.md)
+
+两张界面之间用彩色波纹过渡：卡片朝按钮收拢、波纹扩散并弯曲画面、边缘留彩光。纯 CSS/SVG，不用 WebGL。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/wave-reveal` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion` |
+| 安装 | `pnpm add @hyjkblj/wave-reveal motion` |
+| 文档 | [registry/wave-reveal/README.md](../registry/wave-reveal/README.md) |
+| 源码 | [wave-reveal.tsx](../registry/wave-reveal/wave-reveal.tsx) |
+| 效果图 | [docs/images/wave-reveal.png](images/wave-reveal.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/wave-reveal`；截图用 `?only=wave-reveal&wave=1` |
 
 ---
 

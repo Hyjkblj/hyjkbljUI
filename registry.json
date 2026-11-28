@@ -403,6 +403,21 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "wave-reveal",
+      "type": "registry:ui",
+      "title": "WaveReveal",
+      "description": "彩色波纹转场：卡片收拢、波纹扩散并弯曲画面、边缘留彩光。仅 React，依赖 motion。",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/wave-reveal/wave-reveal.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

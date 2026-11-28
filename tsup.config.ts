@@ -51,6 +51,7 @@ export default defineConfig([
   pkg("shared-layout-bg", ["motion", "motion/react"]),
   pkg("sortable-stack", ["motion", "motion/react", "lucide-react"]),
   pkg("tabs", ["motion", "motion/react", "lucide-react"]),
+  pkg("wave-reveal", ["motion", "motion/react"]),
   pkg("multi-select", ["motion", "motion/react", "lucide-react"], {
     "multi-select": "registry/multi-select/multi-select/index.tsx",
   }),

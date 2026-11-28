@@ -25,6 +25,7 @@ import { MultiSelectDemo } from "./multi-select";
 import { SharedLayoutBgDemo } from "./shared-layout-bg";
 import { SortableStackDemo } from "./sortable-stack";
 import { TabsDemo } from "./tabs";
+import { WaveRevealDemo } from "./wave-reveal";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -52,6 +53,7 @@ import multiSelectSource from "@registry/multi-select/multi-select/index.tsx?raw
 import sharedLayoutBgSource from "@registry/shared-layout-bg/shared-layout-bg.tsx?raw";
 import sortableListSource from "@registry/sortable-stack/sortable-list.tsx?raw";
 import tabsSource from "@registry/tabs/tabs.tsx?raw";
+import waveRevealSource from "@registry/wave-reveal/wave-reveal.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -677,6 +679,30 @@ const [state, setState] = useState<ButtonState>("idle");
 </Tabs>;`,
     source: tabsSource,
     Render: TabsDemo,
+  },
+  {
+    id: "wave-reveal",
+    index: "27",
+    name: "wave-reveal",
+    title: "波纹转场",
+    summary: "两道界面之间用彩色波纹过渡：卡片收拢、波纹扩散并弯曲画面，边缘留彩光。",
+    stack: "React · motion",
+    deps: ["motion"],
+    install: `pnpm add @hyjkblj/wave-reveal motion`,
+    usage: `import { WaveReveal } from "@hyjkblj/wave-reveal";
+
+<WaveReveal
+  revealed={sent}
+  sourceRef={sendRef}
+  className="w-72 rounded-2xl border"
+  revealedContent={<div className="p-5">邀请已发送</div>}
+>
+  <div className="p-5">
+    <button ref={sendRef} onClick={() => setSent(true)}>发送邀请</button>
+  </div>
+</WaveReveal>;`,
+    source: waveRevealSource,
+    Render: WaveRevealDemo,
   },
 ];
 
