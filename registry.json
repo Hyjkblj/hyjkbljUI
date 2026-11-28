@@ -233,6 +233,19 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "merging-bubbles",
+      "type": "registry:ui",
+      "title": "MergingBubbles",
+      "description": "两个图标泡融合成一体的静态图形。仅 React，零运行时依赖，需 shadcn 语义色。",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/merging-bubbles/merging-bubbles.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

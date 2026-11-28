@@ -14,6 +14,7 @@ import { MorphingSearchDemo } from "./morphing-search";
 import { OverflowActionsDemo } from "./overflow-actions";
 import { HeroVideoDialogDemo } from "./hero-video-dialog";
 import { LiquidGlassDemo } from "./liquid-glass";
+import { MergingBubblesDemo } from "./merging-bubbles";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -30,6 +31,7 @@ import morphingSearchSource from "@registry/morphing-search/morphing-search.tsx?
 import overflowActionsSource from "@registry/overflow-actions/overflow-actions.tsx?raw";
 import heroVideoDialogSource from "@registry/hero-video-dialog/hero-video-dialog.tsx?raw";
 import liquidGlassSource from "@registry/liquid-glass/liquid-glass.tsx?raw";
+import mergingBubblesSource from "@registry/merging-bubbles/merging-bubbles.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -425,6 +427,21 @@ const items: MorphingSearchItem[] = [
 />;`,
     source: liquidGlassSource,
     Render: LiquidGlassDemo,
+  },
+  {
+    id: "merging-bubbles",
+    index: "16",
+    name: "merging-bubbles",
+    title: "融合气泡",
+    summary: "两个图标泡靠近、融合成一个、再分开的循环动画。纯 SVG 路径，零依赖。",
+    stack: "React · SVG",
+    deps: [],
+    install: `pnpm add @hyjkblj/merging-bubbles`,
+    usage: `import { MergingBubbles, NextLogo, VercelLogo } from "@hyjkblj/merging-bubbles";
+
+<MergingBubbles size="md" startIcon={<NextLogo />} endIcon={<VercelLogo />} />;`,
+    source: mergingBubblesSource,
+    Render: MergingBubblesDemo,
   },
 ];
 

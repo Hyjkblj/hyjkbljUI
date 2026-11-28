@@ -44,6 +44,7 @@ export default defineConfig([
   pkg("overflow-actions", ["motion", "motion/react", "lucide-react"]),
   pkg("hero-video-dialog", ["motion", "motion/react", "lucide-react"]),
   pkg("liquid-glass", []),
+  pkg("merging-bubbles", []),
   pkg("select", ["motion", "motion/react", "lucide-react"], {
     "select-morph": "registry/select/select-morph.tsx",
   }),

@@ -24,6 +24,7 @@
 | 13 | OverflowActions 溢出操作条 | `@hyjkblj/overflow-actions` | React | motion, lucide-react | experimental | [文档](../registry/overflow-actions/README.md) |
 | 14 | HeroVideoDialog 视频弹窗 | `@hyjkblj/hero-video-dialog` | React | motion, lucide-react | experimental | [文档](../registry/hero-video-dialog/README.md) |
 | 15 | LiquidGlass 液态玻璃 | `@hyjkblj/liquid-glass` | React | 无 | experimental | [文档](../registry/liquid-glass/README.md) |
+| 16 | MergingBubbles 融合气泡 | `@hyjkblj/merging-bubbles` | React | 无 | experimental | [文档](../registry/merging-bubbles/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -311,6 +312,25 @@ SVG 位移滤镜做成的玻璃：折射背后内容，边缘带色散。仅 Chr
 | 源码 | [liquid-glass.tsx](../registry/liquid-glass/liquid-glass.tsx) |
 | 效果图 | [docs/images/liquid-glass.png](images/liquid-glass.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/liquid-glass`；截图用 `?only=liquid-glass` |
+
+---
+
+## 16 · MergingBubbles 融合气泡
+
+[![MergingBubbles 效果图](images/merging-bubbles.png)](../registry/merging-bubbles/README.md)
+
+两个图标泡用融合轮廓连成一体，中间可选加号。**静态图形，源码里没有动画**。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/merging-bubbles` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | 无（需要 shadcn 的 `foreground` / `muted` 语义色） |
+| 安装 | `pnpm add @hyjkblj/merging-bubbles` |
+| 文档 | [registry/merging-bubbles/README.md](../registry/merging-bubbles/README.md) |
+| 源码 | [merging-bubbles.tsx](../registry/merging-bubbles/merging-bubbles.tsx) |
+| 效果图 | [docs/images/merging-bubbles.png](images/merging-bubbles.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/merging-bubbles`；截图用 `?only=merging-bubbles` |
 
 ---
 
