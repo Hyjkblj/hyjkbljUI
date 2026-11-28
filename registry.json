@@ -356,6 +356,21 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "shared-layout-bg",
+      "type": "registry:ui",
+      "title": "SharedLayoutBg",
+      "description": "列表 hover 高亮：胶囊在行间共享 layout 滑动。仅 React，依赖 motion。",
+      "dependencies": [
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/shared-layout-bg/shared-layout-bg.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

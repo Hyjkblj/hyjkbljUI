@@ -32,6 +32,7 @@
 | 21 | Button 基础按钮 | `@hyjkblj/button-base` | React | motion, lucide-react | experimental | [文档](../registry/button-base/README.md) |
 | 22 | Loader 加载指示器 | `@hyjkblj/loader` | React | motion | experimental | [文档](../registry/loader/README.md) |
 | 23 | MultiSelect 多选下拉 | `@hyjkblj/multi-select` | React | motion, lucide-react | experimental | [文档](../registry/multi-select/README.md) |
+| 24 | SharedLayoutBg 共享布局高亮 | `@hyjkblj/shared-layout-bg` | React | motion | experimental | [文档](../registry/shared-layout-bg/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -471,6 +472,25 @@ idle / loading / success / error 四态切换，文字模糊淡入、宽度自�
 | 源码 | [multi-select/index.tsx](../registry/multi-select/multi-select/index.tsx) |
 | 效果图 | [docs/images/multi-select.png](images/multi-select.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/multi-select`；截图用 `?only=multi-select` |
+
+---
+
+## 24 · SharedLayoutBg 共享布局高亮
+
+[![SharedLayoutBg 效果图](images/shared-layout-bg.png)](../registry/shared-layout-bg/README.md)
+
+列表里只有一个胶囊，指针移到哪行就滑过去；进出列表带模糊淡入淡出。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/shared-layout-bg` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion` |
+| 安装 | `pnpm add @hyjkblj/shared-layout-bg motion` |
+| 文档 | [registry/shared-layout-bg/README.md](../registry/shared-layout-bg/README.md) |
+| 源码 | [shared-layout-bg.tsx](../registry/shared-layout-bg/shared-layout-bg.tsx) |
+| 效果图 | [docs/images/shared-layout-bg.png](images/shared-layout-bg.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/shared-layout-bg`；截图用 `?only=shared-layout-bg` |
 
 ---
 

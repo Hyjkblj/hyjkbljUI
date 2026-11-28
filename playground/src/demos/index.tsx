@@ -22,6 +22,7 @@ import { ButtonStatefulDemo } from "./button-stateful";
 import { ButtonBaseDemo } from "./button-base";
 import { LoaderDemo } from "./loader";
 import { MultiSelectDemo } from "./multi-select";
+import { SharedLayoutBgDemo } from "./shared-layout-bg";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -46,6 +47,7 @@ import buttonStatefulSource from "@registry/button-stateful/button/stateful.tsx?
 import buttonBaseSource from "@registry/button-base/button/base.tsx?raw";
 import loaderSource from "@registry/loader/loader.tsx?raw";
 import multiSelectSource from "@registry/multi-select/multi-select/index.tsx?raw";
+import sharedLayoutBgSource from "@registry/shared-layout-bg/shared-layout-bg.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -599,6 +601,27 @@ const [state, setState] = useState<ButtonState>("idle");
 </MultiSelect>;`,
     source: multiSelectSource,
     Render: MultiSelectDemo,
+  },
+  {
+    id: "shared-layout-bg",
+    index: "24",
+    name: "shared-layout-bg",
+    summary: "列表 hover 高亮：胶囊在行间共享 layout 滑动，进出带模糊。",
+    title: "共享布局高亮",
+    stack: "React · motion",
+    deps: ["motion"],
+    install: `pnpm add @hyjkblj/shared-layout-bg motion`,
+    usage: `import { SharedLayoutBg } from "@hyjkblj/shared-layout-bg";
+
+<SharedLayoutBg>
+  {items.map((it) => (
+    <button key={it.title} className="flex flex-col px-2 py-3 text-left">
+      {it.title}
+    </button>
+  ))}
+</SharedLayoutBg>;`,
+    source: sharedLayoutBgSource,
+    Render: SharedLayoutBgDemo,
   },
 ];
 
