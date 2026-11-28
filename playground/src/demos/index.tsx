@@ -23,6 +23,7 @@ import { ButtonBaseDemo } from "./button-base";
 import { LoaderDemo } from "./loader";
 import { MultiSelectDemo } from "./multi-select";
 import { SharedLayoutBgDemo } from "./shared-layout-bg";
+import { SortableStackDemo } from "./sortable-stack";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -48,6 +49,7 @@ import buttonBaseSource from "@registry/button-base/button/base.tsx?raw";
 import loaderSource from "@registry/loader/loader.tsx?raw";
 import multiSelectSource from "@registry/multi-select/multi-select/index.tsx?raw";
 import sharedLayoutBgSource from "@registry/shared-layout-bg/shared-layout-bg.tsx?raw";
+import sortableListSource from "@registry/sortable-stack/sortable-list.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -622,6 +624,35 @@ const [state, setState] = useState<ButtonState>("idle");
 </SharedLayoutBg>;`,
     source: sharedLayoutBgSource,
     Render: SharedLayoutBgDemo,
+  },
+  {
+    id: "sortable-stack",
+    index: "25",
+    name: "sortable-stack",
+    title: "拖拽排序列表",
+    summary: "拖动手柄换顺序，弹簧归位；键盘可移动、位置有播报、支持撤销。",
+    stack: "React · motion",
+    deps: ["motion", "lucide-react"],
+    install: `pnpm add @hyjkblj/sortable-stack motion lucide-react`,
+    usage: `import {
+  SortableList, SortableListGroup, SortableListItem,
+  SortableListHandle, SortableListItemContent, SortableListUndo,
+} from "@hyjkblj/sortable-stack";
+
+<SortableList defaultItems={tasks} getItemLabel={(t) => t.title}>
+  {(items) => (
+    <SortableListGroup>
+      {items.map((item) => (
+        <SortableListItem key={item.id} id={item.id}>
+          <SortableListHandle />
+          <SortableListItemContent>{item.title}</SortableListItemContent>
+        </SortableListItem>
+      ))}
+    </SortableListGroup>
+  )}
+</SortableList>;`,
+    source: sortableListSource,
+    Render: SortableStackDemo,
   },
 ];
 

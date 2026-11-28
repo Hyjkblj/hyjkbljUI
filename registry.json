@@ -371,6 +371,22 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "sortable-stack",
+      "type": "registry:ui",
+      "title": "SortableList",
+      "description": "拖拽排序列表：弹簧归位、键盘移动、位置播报、可撤销。仅 React。",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/sortable-stack/sortable-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

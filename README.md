@@ -63,6 +63,7 @@
 | [Loader](registry/loader/README.md) | `@hyjkblj/loader` | motion | 17 种加载动画 |
 | [MultiSelect](registry/multi-select/README.md) | `@hyjkblj/multi-select` | motion, lucide-react | 可搜索的 token 多选 |
 | [SharedLayoutBg](registry/shared-layout-bg/README.md) | `@hyjkblj/shared-layout-bg` | motion | 滑动式列表高亮 |
+| [SortableList](registry/sortable-stack/README.md) | `@hyjkblj/sortable-stack` | motion, lucide-react | 拖拽排序 + 撤销 |
 
 完整索引（效果图 + 源码链接 + 本地演示方式）：**[docs/COMPONENTS.md](docs/COMPONENTS.md)**
 

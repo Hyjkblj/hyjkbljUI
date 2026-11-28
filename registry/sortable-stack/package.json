@@ -1,0 +1,41 @@
+{
+  "name": "@hyjkblj/sortable-stack",
+  "version": "0.1.0",
+  "description": "拖拽排序列表：弹簧归位、键盘上下移动、位置播报、可撤销。仅 React，依赖 motion 与 lucide-react。",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "sortable-list.tsx",
+    "sortable-stack.tsx",
+    "lib",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/sortable-stack.d.ts",
+      "import": "./dist/sortable-stack.js",
+      "default": "./dist/sortable-stack.js"
+    },
+    "./source": "./sortable-list.tsx",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "pnpm -w run build:pkgs",
+    "prepublishOnly": "pnpm -w run build:pkgs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.7.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "motion": ">=11",
+    "lucide-react": ">=0.400"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

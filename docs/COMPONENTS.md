@@ -33,6 +33,7 @@
 | 22 | Loader 加载指示器 | `@hyjkblj/loader` | React | motion | experimental | [文档](../registry/loader/README.md) |
 | 23 | MultiSelect 多选下拉 | `@hyjkblj/multi-select` | React | motion, lucide-react | experimental | [文档](../registry/multi-select/README.md) |
 | 24 | SharedLayoutBg 共享布局高亮 | `@hyjkblj/shared-layout-bg` | React | motion | experimental | [文档](../registry/shared-layout-bg/README.md) |
+| 25 | SortableList 拖拽排序列表 | `@hyjkblj/sortable-stack` | React | motion, lucide-react | experimental | [文档](../registry/sortable-stack/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -491,6 +492,25 @@ idle / loading / success / error 四态切换，文字模糊淡入、宽度自�
 | 源码 | [shared-layout-bg.tsx](../registry/shared-layout-bg/shared-layout-bg.tsx) |
 | 效果图 | [docs/images/shared-layout-bg.png](images/shared-layout-bg.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/shared-layout-bg`；截图用 `?only=shared-layout-bg` |
+
+---
+
+## 25 · SortableList 拖拽排序列表
+
+[![SortableList 效果图](images/sortable-stack.png)](../registry/sortable-stack/README.md)
+
+拖手柄换顺序，行弹簧归位；键盘 ↑↓ / Home / End 可排，位置有播报，支持撤销。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/sortable-stack` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion`、`lucide-react` |
+| 安装 | `pnpm add @hyjkblj/sortable-stack motion lucide-react` |
+| 文档 | [registry/sortable-stack/README.md](../registry/sortable-stack/README.md) |
+| 源码 | [sortable-list.tsx](../registry/sortable-stack/sortable-list.tsx) |
+| 效果图 | [docs/images/sortable-stack.png](images/sortable-stack.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/sortable-stack`；截图用 `?only=sortable-stack` |
 
 ---
 
