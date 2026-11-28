@@ -47,6 +47,9 @@ export default defineConfig([
   pkg("merging-bubbles", []),
   pkg("apple-pro-display-xdr", []),
   pkg("images-badge", ["motion", "motion/react"]),
+  pkg("button-magnetic", ["motion", "motion/react", "lucide-react"], {
+    "button-magnetic": "registry/button-magnetic/button/magnetic.tsx",
+  }),
   pkg("select", ["motion", "motion/react", "lucide-react"], {
     "select-morph": "registry/select/select-morph.tsx",
   }),

@@ -17,6 +17,7 @@ import { LiquidGlassDemo } from "./liquid-glass";
 import { MergingBubblesDemo } from "./merging-bubbles";
 import { AppleProDisplayXDRDemo } from "./apple-pro-display-xdr";
 import { ImagesBadgeDemo } from "./images-badge";
+import { ButtonMagneticDemo } from "./button-magnetic";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -36,6 +37,7 @@ import liquidGlassSource from "@registry/liquid-glass/liquid-glass.tsx?raw";
 import mergingBubblesSource from "@registry/merging-bubbles/merging-bubbles.tsx?raw";
 import appleProDisplaySource from "@registry/apple-pro-display-xdr/apple-pro-display-xdr.tsx?raw";
 import imagesBadgeSource from "@registry/images-badge/images-badge.tsx?raw";
+import buttonMagneticSource from "@registry/button-magnetic/button/magnetic.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -484,6 +486,23 @@ const items: MorphingSearchItem[] = [
 />;`,
     source: imagesBadgeSource,
     Render: ImagesBadgeDemo,
+  },
+  {
+    id: "button-magnetic",
+    index: "19",
+    name: "button-magnetic",
+    title: "磁吸按钮",
+    summary: "光标靠近时按钮朝光标方向位移，离开弹簧回弹。触屏与减少动态下自动关闭。",
+    stack: "React · motion",
+    deps: ["motion", "lucide-react"],
+    install: `pnpm add @hyjkblj/button-magnetic motion lucide-react`,
+    usage: `import { MagneticButton } from "@hyjkblj/button-magnetic";
+
+<MagneticButton variant="primary" size="md" strength={0.35}>
+  主按钮 <ArrowRight className="h-4 w-4" />
+</MagneticButton>;`,
+    source: buttonMagneticSource,
+    Render: ButtonMagneticDemo,
   },
 ];
 

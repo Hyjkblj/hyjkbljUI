@@ -27,6 +27,7 @@
 | 16 | MergingBubbles 融合气泡 | `@hyjkblj/merging-bubbles` | React | 无 | experimental | [文档](../registry/merging-bubbles/README.md) |
 | 17 | AppleProDisplayXDR 显示器 | `@hyjkblj/apple-pro-display-xdr` | React | motion, @tabler/icons-react | experimental | [文档](../registry/apple-pro-display-xdr/README.md) |
 | 18 | ImagesBadge 图片堆徽章 | `@hyjkblj/images-badge` | React | motion | experimental | [文档](../registry/images-badge/README.md) |
+| 19 | MagneticButton 磁吸按钮 | `@hyjkblj/button-magnetic` | React | motion, lucide-react | experimental | [文档](../registry/button-magnetic/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -371,6 +372,25 @@ SVG 位移滤镜做成的玻璃：折射背后内容，边缘带色散。仅 Chr
 | 源码 | [images-badge.tsx](../registry/images-badge/images-badge.tsx) |
 | 效果图 | [docs/images/images-badge.png](images/images-badge.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/images-badge`；截图用 `?only=images-badge` |
+
+---
+
+## 19 · MagneticButton 磁吸按钮
+
+[![MagneticButton 效果图](images/button-magnetic.png)](../registry/button-magnetic/README.md)
+
+光标靠近时按钮朝光标位移，离开用弹簧回弹。触屏与减少动态下自动关闭。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/button-magnetic` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion`、`lucide-react`（需 shadcn 语义色变量） |
+| 安装 | `pnpm add @hyjkblj/button-magnetic motion lucide-react` |
+| 文档 | [registry/button-magnetic/README.md](../registry/button-magnetic/README.md) |
+| 源码 | [button/magnetic.tsx](../registry/button-magnetic/button/magnetic.tsx) |
+| 效果图 | [docs/images/button-magnetic.png](images/button-magnetic.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/button-magnetic`；截图用 `?only=button-magnetic` |
 
 ---
 

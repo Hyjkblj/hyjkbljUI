@@ -277,6 +277,22 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "button-magnetic",
+      "type": "registry:ui",
+      "title": "MagneticButton",
+      "description": "磁吸按钮：光标靠近时朝光标位移，离开回弹。仅 React，依赖 motion 与 lucide-react。",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/button-magnetic/button/magnetic.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,41 @@
+{
+  "name": "@hyjkblj/button-magnetic",
+  "version": "0.1.0",
+  "description": "磁吸按钮：光标靠近时按钮朝光标方向轻微位移，离开回弹。仅 React，依赖 motion 与 lucide-react。",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "button",
+    "lib",
+    "magnetic.tsx",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/button-magnetic.d.ts",
+      "import": "./dist/button-magnetic.js",
+      "default": "./dist/button-magnetic.js"
+    },
+    "./source": "./button/magnetic.tsx",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "pnpm -w run build:pkgs",
+    "prepublishOnly": "pnpm -w run build:pkgs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.7.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "motion": ">=11",
+    "lucide-react": ">=0.400"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

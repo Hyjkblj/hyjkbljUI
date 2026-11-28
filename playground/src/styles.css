@@ -6,6 +6,12 @@
 /* Coss skeleton 需要的主题变量与动画 */
 @theme {
   --color-muted: #f4f4f5;
+  --color-foreground: #171717;
+  --color-primary: #18181b;
+  --color-primary-foreground: #fafafa;
+  --color-secondary: #f4f4f5;
+  --color-secondary-foreground: #18181b;
+  --color-border: #e4e4e7;
   --animate-skeleton: skeleton 2s -1s infinite linear;
 }
 
@@ -17,6 +23,12 @@
 
 html.dark {
   --color-muted: #27272a;
+  --color-foreground: #fafafa;
+  --color-primary: #fafafa;
+  --color-primary-foreground: #18181b;
+  --color-secondary: #27272a;
+  --color-secondary-foreground: #fafafa;
+  --color-border: #27272a;
 }
 
 /* 用 .dark 类控制暗色，避免依赖系统主题 */
