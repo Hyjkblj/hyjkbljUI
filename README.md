@@ -55,6 +55,7 @@
 | [HeroVideoDialog](registry/hero-video-dialog/README.md) | `@hyjkblj/hero-video-dialog` | motion, lucide-react | 缩略图点开成视频弹窗 |
 | [LiquidGlass](registry/liquid-glass/README.md) | `@hyjkblj/liquid-glass` | 无 | 会折射的液态玻璃 |
 | [MergingBubbles](registry/merging-bubbles/README.md) | `@hyjkblj/merging-bubbles` | 无 | 两泡融合成一体的图形 |
+| [AppleProDisplayXDR](registry/apple-pro-display-xdr/README.md) | `@hyjkblj/apple-pro-display-xdr` | motion, tabler | CSS/SVG 复刻的苹果显示器 |
 
 完整索引（效果图 + 源码链接 + 本地演示方式）：**[docs/COMPONENTS.md](docs/COMPONENTS.md)**
 

@@ -15,6 +15,7 @@ import { OverflowActionsDemo } from "./overflow-actions";
 import { HeroVideoDialogDemo } from "./hero-video-dialog";
 import { LiquidGlassDemo } from "./liquid-glass";
 import { MergingBubblesDemo } from "./merging-bubbles";
+import { AppleProDisplayXDRDemo } from "./apple-pro-display-xdr";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -32,6 +33,7 @@ import overflowActionsSource from "@registry/overflow-actions/overflow-actions.t
 import heroVideoDialogSource from "@registry/hero-video-dialog/hero-video-dialog.tsx?raw";
 import liquidGlassSource from "@registry/liquid-glass/liquid-glass.tsx?raw";
 import mergingBubblesSource from "@registry/merging-bubbles/merging-bubbles.tsx?raw";
+import appleProDisplaySource from "@registry/apple-pro-display-xdr/apple-pro-display-xdr.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -442,6 +444,25 @@ const items: MorphingSearchItem[] = [
 <MergingBubbles size="md" startIcon={<NextLogo />} endIcon={<VercelLogo />} />;`,
     source: mergingBubblesSource,
     Render: MergingBubblesDemo,
+  },
+  {
+    id: "apple-pro-display-xdr",
+    index: "17",
+    name: "apple-pro-display-xdr",
+    title: "Pro Display XDR",
+    summary: "纯 CSS/SVG 复刻的 Apple 显示器：铝框、倒角、摄像头、录制灯，屏幕内容可换。",
+    stack: "React · motion",
+    deps: ["motion", "@tabler/icons-react"],
+    install: `pnpm add @hyjkblj/apple-pro-display-xdr motion @tabler/icons-react`,
+    usage: `import { AppleProDisplayXDR } from "@hyjkblj/apple-pro-display-xdr";
+
+// 用内置屏幕内容
+<AppleProDisplayXDR initialMode="gradient" />;
+
+// 或完全自定义屏幕
+<AppleProDisplayXDR screenContent={<img src="/my-shot.png" alt="" className="size-full object-cover" />} />;`,
+    source: appleProDisplaySource,
+    Render: AppleProDisplayXDRDemo,
   },
 ];
 

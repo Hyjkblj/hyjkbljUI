@@ -25,6 +25,7 @@
 | 14 | HeroVideoDialog 视频弹窗 | `@hyjkblj/hero-video-dialog` | React | motion, lucide-react | experimental | [文档](../registry/hero-video-dialog/README.md) |
 | 15 | LiquidGlass 液态玻璃 | `@hyjkblj/liquid-glass` | React | 无 | experimental | [文档](../registry/liquid-glass/README.md) |
 | 16 | MergingBubbles 融合气泡 | `@hyjkblj/merging-bubbles` | React | 无 | experimental | [文档](../registry/merging-bubbles/README.md) |
+| 17 | AppleProDisplayXDR 显示器 | `@hyjkblj/apple-pro-display-xdr` | React | motion, @tabler/icons-react | experimental | [文档](../registry/apple-pro-display-xdr/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -331,6 +332,25 @@ SVG 位移滤镜做成的玻璃：折射背后内容，边缘带色散。仅 Chr
 | 源码 | [merging-bubbles.tsx](../registry/merging-bubbles/merging-bubbles.tsx) |
 | 效果图 | [docs/images/merging-bubbles.png](images/merging-bubbles.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/merging-bubbles`；截图用 `?only=merging-bubbles` |
+
+---
+
+## 17 · AppleProDisplayXDR 显示器
+
+[![AppleProDisplayXDR 效果图](images/apple-pro-display-xdr.png)](../registry/apple-pro-display-xdr/README.md)
+
+纯 CSS/SVG 复刻的 Pro Display XDR：铝框、倒角、摄像头、录制灯、支架，屏幕内容四选一或完全自定义。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/apple-pro-display-xdr` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion`、`@tabler/icons-react`（next/image 与 base-ui Tooltip 已换成本地替身） |
+| 安装 | `pnpm add @hyjkblj/apple-pro-display-xdr motion @tabler/icons-react` |
+| 文档 | [registry/apple-pro-display-xdr/README.md](../registry/apple-pro-display-xdr/README.md) |
+| 源码 | [apple-pro-display-xdr.tsx](../registry/apple-pro-display-xdr/apple-pro-display-xdr.tsx) |
+| 效果图 | [docs/images/apple-pro-display-xdr.png](images/apple-pro-display-xdr.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/apple-pro-display-xdr`；截图用 `?only=apple-pro-display-xdr` |
 
 ---
 

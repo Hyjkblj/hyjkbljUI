@@ -246,6 +246,22 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "apple-pro-display-xdr",
+      "type": "registry:ui",
+      "title": "AppleProDisplayXDR",
+      "description": "纯 CSS/SVG 复刻的 Pro Display XDR，屏幕内容可换。仅 React，依赖 motion 与 @tabler/icons-react。",
+      "dependencies": [
+        "motion",
+        "@tabler/icons-react"
+      ],
+      "files": [
+        {
+          "path": "registry/apple-pro-display-xdr/apple-pro-display-xdr.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
