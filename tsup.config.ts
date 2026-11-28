@@ -52,6 +52,7 @@ export default defineConfig([
   pkg("sortable-stack", ["motion", "motion/react", "lucide-react"]),
   pkg("tabs", ["motion", "motion/react", "lucide-react"]),
   pkg("wave-reveal", ["motion", "motion/react"]),
+  pkg("background-cubes-grid", ["three", "three/*", "motion", "motion/react"]),
   pkg("multi-select", ["motion", "motion/react", "lucide-react"], {
     "multi-select": "registry/multi-select/multi-select/index.tsx",
   }),

@@ -36,6 +36,7 @@
 | 25 | SortableList 拖拽排序列表 | `@hyjkblj/sortable-stack` | React | motion, lucide-react | experimental | [文档](../registry/sortable-stack/README.md) |
 | 26 | Tabs 标签页 | `@hyjkblj/tabs` | React | motion, lucide-react | experimental | [文档](../registry/tabs/README.md) |
 | 27 | WaveReveal 波纹转场 | `@hyjkblj/wave-reveal` | React | motion | experimental | [文档](../registry/wave-reveal/README.md) |
+| 28 | BackgroundCubesGrid 立方体网格 | `@hyjkblj/background-cubes-grid` | React | three, motion | experimental | [文档](../registry/background-cubes-grid/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -551,6 +552,25 @@ idle / loading / success / error 四态切换，文字模糊淡入、宽度自�
 | 源码 | [wave-reveal.tsx](../registry/wave-reveal/wave-reveal.tsx) |
 | 效果图 | [docs/images/wave-reveal.png](images/wave-reveal.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/wave-reveal`；截图用 `?only=wave-reveal&wave=1` |
+
+---
+
+## 28 · BackgroundCubesGrid 立方体网格背景
+
+[![BackgroundCubesGrid 效果图](images/background-cubes-grid.png)](../registry/background-cubes-grid/README.md)
+
+Three.js 立方体阵列：等距或透视两版，鼠标激起波纹，静置后自动滴落涟漪。**本仓库唯一带 WebGL 的组件。**
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/background-cubes-grid` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `three`（约 600KB）、`motion` |
+| 安装 | `pnpm add @hyjkblj/background-cubes-grid three motion` |
+| 文档 | [registry/background-cubes-grid/README.md](../registry/background-cubes-grid/README.md) |
+| 源码 | [background-cubes-grid.tsx](../registry/background-cubes-grid/background-cubes-grid.tsx) |
+| 效果图 | [docs/images/background-cubes-grid.png](images/background-cubes-grid.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/background-cubes-grid`；截图用 `?only=background-cubes-grid` |
 
 ---
 

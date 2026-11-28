@@ -1,0 +1,39 @@
+{
+  "name": "@hyjkblj/background-cubes-grid",
+  "version": "0.1.0",
+  "description": "Three.js 立方体网格背景：等距或透视两版，波纹从指针扩散、可自动滴落涟漪。仅 React。",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "background-cubes-grid.tsx",
+    "README.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/background-cubes-grid.d.ts",
+      "import": "./dist/background-cubes-grid.js",
+      "default": "./dist/background-cubes-grid.js"
+    },
+    "./source": "./background-cubes-grid.tsx",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "pnpm -w run build:pkgs",
+    "prepublishOnly": "pnpm -w run build:pkgs"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.7.1"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "motion": ">=11",
+    "three": ">=0.160"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

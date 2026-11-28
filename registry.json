@@ -418,6 +418,22 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "background-cubes-grid",
+      "type": "registry:ui",
+      "title": "BackgroundCubesGrid",
+      "description": "Three.js 立方体网格背景：等距/透视两版，指针波纹 + 自动涟漪。仅 React。",
+      "dependencies": [
+        "three",
+        "motion"
+      ],
+      "files": [
+        {
+          "path": "registry/background-cubes-grid/background-cubes-grid.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

@@ -26,6 +26,7 @@ import { SharedLayoutBgDemo } from "./shared-layout-bg";
 import { SortableStackDemo } from "./sortable-stack";
 import { TabsDemo } from "./tabs";
 import { WaveRevealDemo } from "./wave-reveal";
+import { BackgroundCubesGridDemo } from "./background-cubes-grid";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -54,6 +55,7 @@ import sharedLayoutBgSource from "@registry/shared-layout-bg/shared-layout-bg.ts
 import sortableListSource from "@registry/sortable-stack/sortable-list.tsx?raw";
 import tabsSource from "@registry/tabs/tabs.tsx?raw";
 import waveRevealSource from "@registry/wave-reveal/wave-reveal.tsx?raw";
+import backgroundCubesGridSource from "@registry/background-cubes-grid/background-cubes-grid.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -703,6 +705,24 @@ const [state, setState] = useState<ButtonState>("idle");
 </WaveReveal>;`,
     source: waveRevealSource,
     Render: WaveRevealDemo,
+  },
+  {
+    id: "background-cubes-grid",
+    index: "28",
+    name: "background-cubes-grid",
+    title: "立方体网格背景",
+    summary: "Three.js 立方体阵列：等距/透视两版，波纹从指针扩散，闲置时自动滴落涟漪。",
+    stack: "React · three · motion",
+    deps: ["three", "motion"],
+    install: `pnpm add @hyjkblj/background-cubes-grid three motion`,
+    usage: `import { BackgroundCubesGrid } from "@hyjkblj/background-cubes-grid";
+
+<div className="relative isolate">
+  <BackgroundCubesGrid className="-z-10" />
+  <h1>你的内容</h1>
+</div>;`,
+    source: backgroundCubesGridSource,
+    Render: BackgroundCubesGridDemo,
   },
 ];
 
