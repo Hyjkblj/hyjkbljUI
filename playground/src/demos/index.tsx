@@ -13,6 +13,7 @@ import { ExpandableActionBarDemo } from "./expandable-action-bar";
 import { MorphingSearchDemo } from "./morphing-search";
 import { OverflowActionsDemo } from "./overflow-actions";
 import { HeroVideoDialogDemo } from "./hero-video-dialog";
+import { LiquidGlassDemo } from "./liquid-glass";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -28,6 +29,7 @@ import expandableActionBarSource from "@registry/expandable-action-bar/expandabl
 import morphingSearchSource from "@registry/morphing-search/morphing-search.tsx?raw";
 import overflowActionsSource from "@registry/overflow-actions/overflow-actions.tsx?raw";
 import heroVideoDialogSource from "@registry/hero-video-dialog/hero-video-dialog.tsx?raw";
+import liquidGlassSource from "@registry/liquid-glass/liquid-glass.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -400,6 +402,29 @@ const items: MorphingSearchItem[] = [
 />;`,
     source: heroVideoDialogSource,
     Render: HeroVideoDialogDemo,
+  },
+  {
+    id: "liquid-glass",
+    index: "15",
+    name: "liquid-glass",
+    title: "液态玻璃",
+    summary: "SVG 位移滤镜 + 背景模糊做出来的玻璃材质，可拖动，能折射背后的内容。零依赖。",
+    stack: "React · SVG filter",
+    deps: [],
+    install: `pnpm add @hyjkblj/liquid-glass`,
+    usage: `import { LiquidGlass } from "@hyjkblj/liquid-glass";
+
+<LiquidGlass
+  radius={100}
+  scale={48}
+  aberration={14}
+  bevelDepth={37}
+  frost={0.4}
+  tint={0.12}
+  className="size-50 rounded-full"
+/>;`,
+    source: liquidGlassSource,
+    Render: LiquidGlassDemo,
   },
 ];
 

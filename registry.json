@@ -220,6 +220,19 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "liquid-glass",
+      "type": "registry:ui",
+      "title": "LiquidGlass",
+      "description": "液态玻璃材质：SVG 位移滤镜 + 背景模糊，可折射背后内容。仅 React，零依赖。",
+      "dependencies": [],
+      "files": [
+        {
+          "path": "registry/liquid-glass/liquid-glass.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }

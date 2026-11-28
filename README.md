@@ -53,6 +53,7 @@
 | [MorphingSearch](registry/morphing-search/README.md) | `@hyjkblj/morphing-search` | motion, lucide-react | 形变成玻璃面板的搜索 |
 | [OverflowActions](registry/overflow-actions/README.md) | `@hyjkblj/overflow-actions` | motion, lucide-react | 主操作常驻、次级弹簧展开 |
 | [HeroVideoDialog](registry/hero-video-dialog/README.md) | `@hyjkblj/hero-video-dialog` | motion, lucide-react | 缩略图点开成视频弹窗 |
+| [LiquidGlass](registry/liquid-glass/README.md) | `@hyjkblj/liquid-glass` | 无 | 会折射的液态玻璃 |
 
 完整索引（效果图 + 源码链接 + 本地演示方式）：**[docs/COMPONENTS.md](docs/COMPONENTS.md)**
 
