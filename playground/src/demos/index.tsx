@@ -12,6 +12,7 @@ import { SelectDemo } from "./select";
 import { ExpandableActionBarDemo } from "./expandable-action-bar";
 import { MorphingSearchDemo } from "./morphing-search";
 import { OverflowActionsDemo } from "./overflow-actions";
+import { HeroVideoDialogDemo } from "./hero-video-dialog";
 
 import macbookScrollSource from "@registry/macbook-scroll/macbook-scroll.tsx?raw";
 import canvasTextSource from "@registry/canvas-text/canvas-text.tsx?raw";
@@ -26,6 +27,7 @@ import selectSource from "@registry/select/select.tsx?raw";
 import expandableActionBarSource from "@registry/expandable-action-bar/expandable-action-bar.tsx?raw";
 import morphingSearchSource from "@registry/morphing-search/morphing-search.tsx?raw";
 import overflowActionsSource from "@registry/overflow-actions/overflow-actions.tsx?raw";
+import heroVideoDialogSource from "@registry/hero-video-dialog/hero-video-dialog.tsx?raw";
 
 export type DemoMeta = {
   /** 路由 key，同时也是 registry 目录名 */
@@ -378,6 +380,26 @@ const items: MorphingSearchItem[] = [
 />;`,
     source: overflowActionsSource,
     Render: OverflowActionsDemo,
+  },
+  {
+    id: "hero-video-dialog",
+    index: "14",
+    name: "hero-video-dialog",
+    title: "视频弹窗",
+    summary: "缩略图点开成视频弹窗，7 种展开动画，背后压模糊遮罩。",
+    stack: "React · motion",
+    deps: ["motion", "lucide-react"],
+    install: `pnpm add @hyjkblj/hero-video-dialog motion lucide-react`,
+    usage: `import { HeroVideoDialog } from "@hyjkblj/hero-video-dialog";
+
+<HeroVideoDialog
+  animationStyle="from-center"
+  videoSrc="https://www.youtube.com/embed/xxx"
+  thumbnailSrc="/thumb.png"
+  thumbnailAlt="产品演示"
+/>;`,
+    source: heroVideoDialogSource,
+    Render: HeroVideoDialogDemo,
   },
 ];
 

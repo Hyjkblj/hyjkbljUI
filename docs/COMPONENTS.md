@@ -22,6 +22,7 @@
 | 11 | ExpandableActionBar 可展开工具条 | `@hyjkblj/expandable-action-bar` | React | motion, lucide-react | experimental | [文档](../registry/expandable-action-bar/README.md) |
 | 12 | MorphingSearch 形变搜索 | `@hyjkblj/morphing-search` | React | motion, lucide-react | experimental | [文档](../registry/morphing-search/README.md) |
 | 13 | OverflowActions 溢出操作条 | `@hyjkblj/overflow-actions` | React | motion, lucide-react | experimental | [文档](../registry/overflow-actions/README.md) |
+| 14 | HeroVideoDialog 视频弹窗 | `@hyjkblj/hero-video-dialog` | React | motion, lucide-react | experimental | [文档](../registry/hero-video-dialog/README.md) |
 
 **状态说明**：`experimental` → 能用，API 可能变；`stable` → 推荐使用；`deprecated` → 准备移除。
 
@@ -271,6 +272,25 @@ macOS 那种 Dock：鼠标横向扫过时，离光标最近的图标被弹簧放
 | 源码 | [overflow-actions.tsx](../registry/overflow-actions/overflow-actions.tsx) |
 | 效果图 | [docs/images/overflow-actions.png](images/overflow-actions.png) |
 | 本地演示 | `pnpm dev` 后打开 `#/overflow-actions`；截图用 `?only=overflow-actions` |
+
+---
+
+## 14 · HeroVideoDialog 视频弹窗
+
+[![HeroVideoDialog 效果图](images/hero-video-dialog.png)](../registry/hero-video-dialog/README.md)
+
+缩略图上盖个播放按钮，点开视频从指定方向放大铺满视口，背后压模糊遮罩。8 种展开方向。
+
+| 项 | 值 |
+| --- | --- |
+| 包名 | `@hyjkblj/hero-video-dialog` |
+| 框架 / 状态 | React · experimental |
+| 依赖 | `motion`、`lucide-react` |
+| 安装 | `pnpm add @hyjkblj/hero-video-dialog motion lucide-react` |
+| 文档 | [registry/hero-video-dialog/README.md](../registry/hero-video-dialog/README.md) |
+| 源码 | [hero-video-dialog.tsx](../registry/hero-video-dialog/hero-video-dialog.tsx) |
+| 效果图 | [docs/images/hero-video-dialog.png](images/hero-video-dialog.png) |
+| 本地演示 | `pnpm dev` 后打开 `#/hero-video-dialog`；截图用 `?only=hero-video-dialog` |
 
 ---
 

@@ -42,6 +42,7 @@ export default defineConfig([
   pkg("expandable-action-bar", ["motion", "motion/react", "lucide-react"]),
   pkg("morphing-search", ["motion", "motion/react", "lucide-react"]),
   pkg("overflow-actions", ["motion", "motion/react", "lucide-react"]),
+  pkg("hero-video-dialog", ["motion", "motion/react", "lucide-react"]),
   pkg("select", ["motion", "motion/react", "lucide-react"], {
     "select-morph": "registry/select/select-morph.tsx",
   }),

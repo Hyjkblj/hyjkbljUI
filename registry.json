@@ -204,6 +204,22 @@
           "type": "registry:ui"
         }
       ]
+    },
+    {
+      "name": "hero-video-dialog",
+      "type": "registry:ui",
+      "title": "HeroVideoDialog",
+      "description": "缩略图点开成视频弹窗，8 种展开动画。仅 React，依赖 motion 与 lucide-react。",
+      "dependencies": [
+        "motion",
+        "lucide-react"
+      ],
+      "files": [
+        {
+          "path": "registry/hero-video-dialog/hero-video-dialog.tsx",
+          "type": "registry:ui"
+        }
+      ]
     }
   ]
 }
